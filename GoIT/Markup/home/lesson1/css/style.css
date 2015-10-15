@@ -1,0 +1,38 @@
+body {
+	margin: 5px 0 0;
+	padding: 0;
+	background: #eeeeee;
+}
+.wrappen {
+	width: 410px;
+	margin: 0 auto;
+	padding: 30px 50px;
+	background: white;
+	box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+.myName {
+	text-align: center;
+	font-size: 24px;
+}
+.myPhoto {
+	text-align: center;
+}
+p, a {
+	padding-left: 12px;
+	text-align: justify;
+}
+ul {
+	padding: 0;
+	margin-left: 30px;
+}
+li {
+    padding-left: 2px;
+}
+.contact,
+.feedback {
+	margin-bottom: 3px;
+}
+.feedback:last-child {
+	margin-top: 3px;
+	margin-bottom: 40px;
+}
