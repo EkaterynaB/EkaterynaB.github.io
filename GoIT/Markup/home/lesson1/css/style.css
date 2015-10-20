@@ -18,6 +18,11 @@ h1 {
 .myPhoto {
 	text-align: center;
 }
+.line {
+	padding-top: 17px;
+	margin-top: 10px;
+	border-top: 1px solid #000;
+}
 .tel {
 	text-decoration: none;
 	color: #000;
