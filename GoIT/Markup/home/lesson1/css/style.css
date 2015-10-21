@@ -1,46 +1,53 @@
 body {
-	margin: 5px 0 0;
+	margin: 4px 0 0;
 	background: #eeeeee;
 	color: #000;
-	font: 16px/25px "Time New Roman", serif;
-}
-.wrapper {
-	width: 410px;
-	margin: 0 auto;
-	padding: 30px 50px;
-	background: white;
-	box-shadow: 0 0 2px rgba(0,0,0,0.5);
+	font: 17px/26px "Time New Roman", serif;
 }
 h1 {
 	text-align: center;
-	font-size: 24px;
+	font-size: 22px;
+	margin-top: 18px;
 }
-.myPhoto {
-	text-align: center;
-}
-.line {
-	padding-top: 17px;
-	margin-top: 10px;
-	border-top: 1px solid #000;
-}
-.tel {
-	text-decoration: none;
-	color: #000;
-}
-p, a {
+p:not(.myPhoto) {
 	padding-left: 12px;
 	text-align: justify;
 }
 ul {
 	padding: 0;
-	margin-left: 30px;
+	margin-left: 34px;
+	margin-top: 25px;
 }
 li {
-    padding-left: 2px;
+    padding-left: 4px;
 }
-.info {
-	margin-bottom: 0px;
+.wrapper {
+	width: 412px;
+	margin: 0 auto;
+	padding: 30px 50px;
+	background: white;
+	box-shadow: 0 0 2px rgba(0,0,0,0.5);
 }
-.info:last-child {
-	margin: 0 0 40px 0;
+.block:not(:last-of-type) {
+	border-bottom: 1px solid #000000;
+	margin-bottom: 22px;
+}
+.myPhoto {
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 16px;
+}
+.myPhoto+p {
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+.question {
+	margin-bottom: 0;
+}
+.tel {
+	text-decoration: none;
+	color: #000;
+}
+.answer {
+	margin-top: 0;
 }
