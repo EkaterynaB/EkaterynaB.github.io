@@ -4,7 +4,7 @@
 }
 body {
     background: #f9f9f9;
-    font: 13px/30px "Open Sans", sans-serif;
+    font: 13px/21px  "Open Sans", Arial, Helvetica sans-serif;
 }
 img {
     display: block;
@@ -30,6 +30,17 @@ header,
 nav {
     margin-bottom: 40px;
 }
+.logo {
+    width: 144px;
+    height: 40px;
+    background: url(../img/logo.png) no-repeat;
+    display: block;
+}
+.logo a {
+    text-indent: -10em;
+    overflow: hidden;
+    height: 40px;
+}
 
 /*MENU*/
 
@@ -54,6 +65,7 @@ nav {
     -o-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
+.mainMenu li a:hover,
 .mainMenu li a.active {
     padding: 0 34px;
     border-left: 1px solid #838383;
@@ -77,13 +89,13 @@ aside {
     width: 240px;
     float: left;
 }
-aside ul li {
+aside li {
     display: block;
 }
-aside ul li:last-child {
+aside li:last-child {
     border-bottom: 1px solid #c8c8c8;
 }
-aside ul li a{
+aside ul a{
     border: 1px solid #c8c8c8;
     border-bottom: none;
     padding-left: 21px;
@@ -96,7 +108,7 @@ aside ul li a{
     background: #f9f9f9;
     padding-left: 35px;
 }
-aside ul li a:hover {
+aside ul a:hover {
     color: #2c2c2c;
     background: #f9f9f9;
     padding-left: 35px;
@@ -108,13 +120,17 @@ section {
     width: 678px;
     margin-left: 288px;
 }
-section div {
-    padding: 46px 80px 45px 88px;
+.bigImage {
+    padding: 46px 88px 45px 88px;
     border: 1px solid #c8c8c8;
+    display: inline-block;
+    vertical-align: top;
 }
-section p {
+.productInfo {
     margin: 34px 23px 60px 24px;
-    line-height: 21px;
+}
+.productInfo p {
+    margin-bottom: 20px;
 }
 
 /*FOOTER*/
@@ -123,13 +139,16 @@ footer {
     background: #e1e1e1;
 }
 footer nav {
-    width: 60%;
+    width: 545px;
     float: left;
 }
-footer nav ul a {
+footer nav a {
     color: #2c2c2c;
     padding: 0 45px;
     line-height: 40px;
+}
+footer nav a:hover {
+    text-decoration: underline;
 }
 footer li:first-child a{
     padding-left: 25px;
