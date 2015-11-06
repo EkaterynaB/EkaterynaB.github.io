@@ -13,13 +13,12 @@ img {
 a {
     text-decoration: none;
     color: #e6e6e6;
-    display: block;
 }
 .wrapper {
-    width: 816px;
+    width: 818px;
     margin: 0 auto;
     padding: 55px 71px 10px;
-    min-height: 808px;
+    min-height: 748px;
     position: relative;
 }
 
@@ -33,6 +32,7 @@ header {
     height: 147px;
     display: block;
     overflow: hidden;
+    background: url(../img/logo.png) no-repeat;
 }
 .logo strong {
     position: absolute;
@@ -46,7 +46,7 @@ header {
 }
 .contact {
     position: absolute;
-    right: 11px;
+    right: 22px;
     bottom: 15px;
     font-size: 10px;
     line-height: 19px;
@@ -58,28 +58,29 @@ header {
 
 /*CONTENT*/
 
-section {
+.countries {
     margin: 2px 0 10px;
     font-size: 0;
 }
 .country {
     display: inline-block;
     text-align: center;
-    margin-right: 16px;
+    margin-right: 11px;
     margin-bottom: 52px;
     position: relative;
 }
 .country:nth-child(3n) {
     margin-right: 0;
 }
+.country a {
+    display: block;
+}
 .country img {
     margin-bottom: 3px;
+    position: relative;
+    z-index: -2;
 }
 .country .frame {
-    position: absolute;
-    right: -2px;
-    top: -2px;
-    display: block;
     width: 259px;
     height: 176px;
     border: 3px solid #c2c2c2;
@@ -95,13 +96,8 @@ section {
 /*FOOTER*/
 
 footer {
-    padding: 21px 0;
+    padding: 25px 0;
     font-size: 10px;
-    position: absolute;
-    bottom: 0;
-    width: inherit;
+    width: 100%;
     text-align: center;
-}
-footer a {
-    display: inline;
 }

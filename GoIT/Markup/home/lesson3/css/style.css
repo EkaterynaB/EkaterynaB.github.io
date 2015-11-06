@@ -11,7 +11,6 @@ img {
 }
 a {
     text-decoration: none;
-    display: block;
 }
 ul li {
     list-style: none;
@@ -40,6 +39,7 @@ nav {
     text-indent: -10em;
     overflow: hidden;
     height: 40px;
+    display: block;
 }
 
 /*MENU*/
@@ -55,8 +55,10 @@ nav {
     background: linear-gradient(to bottom, #5e5e5e 0%,#444343 100%); /* W3C */
 }
 .mainMenu a {
+    display: block;
     font-size: 14px;
     padding: 0 35px;
+    margin-right: -1px;
     color: #fff;
     line-height: 40px;
     -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -96,6 +98,7 @@ aside li:last-child {
     border-bottom: 1px solid #c8c8c8;
 }
 aside ul a{
+    display: block;
     border: 1px solid #c8c8c8;
     border-bottom: none;
     padding-left: 21px;
@@ -123,6 +126,8 @@ section {
 .bigImage {
     padding: 46px 88px 45px 88px;
     border: 1px solid #c8c8c8;
+}
+.bigImage img {
     display: inline-block;
     vertical-align: top;
 }
@@ -144,13 +149,15 @@ footer nav {
 }
 footer nav a {
     color: #2c2c2c;
-    padding: 0 45px;
-    line-height: 40px;
 }
 footer nav a:hover {
     text-decoration: underline;
 }
-footer li:first-child a{
+footer li {
+    padding: 0 45px;
+    line-height: 40px;
+}
+footer li:first-child {
     padding-left: 25px;
 }
 .activeFooter {
