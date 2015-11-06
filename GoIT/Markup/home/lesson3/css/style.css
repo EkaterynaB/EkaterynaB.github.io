@@ -36,7 +36,7 @@ nav {
     display: block;
 }
 .logo a {
-    text-indent: -10em;
+    text-indent: -9999px;
     overflow: hidden;
     height: 40px;
     display: block;
