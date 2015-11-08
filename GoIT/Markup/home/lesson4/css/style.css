@@ -47,15 +47,13 @@ header a {
     height: 164px;
     overflow: hidden;
     background: url(../img/logo.png);
-}
-.logo strong {
-    position: absolute;
-    top: -99999px;
+    font-size: 0;
 }
 .logo span {
     position: absolute;
     bottom: 48px;
     left: 99px;
+    font-size: 12px;
 }
 .contact {
     position: absolute;
