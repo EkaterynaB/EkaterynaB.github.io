@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header class="clearfix">
+        <div class="header-actions clearfix">
+            <a class="offers" href="#">Minhas Ofertas</a>
+            <div class="sing-up">
+                Ola! <a href="#">Entrar</a>
+                ou <a href="#">Cadastre-se </a>
+            </div>
+        </div>
         <nav class="header-nav">
-            <ul>
+            <ul class="clearfix">
                 <li><a href="#">Meu YouBike</a></li>
                 <li><a href="#" class="active">Vender</a></li>
                 <li><a href="#">Forum</a></li>
@@ -17,42 +24,39 @@
                 <li><a href="#">Ajuda</a></li>
             </ul>
         </nav>
-        <div class="header-actions">
-            <a class="offers" href="#">Minhas Ofertas</a>
-            <div class="sing-up">
-                Ola! <a href="#">Entrar</a>
-                ou <a href="#">Cadastre-se </a>
+    </header>
+    <div class="box">
+    <div class="wrapper">
+        <div class="container">
+            <h1>Cadastre-se</h1>
+            <div class="form">
+                <button class="button-fb clearfix">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-chevron-right"></i>
+                    Log In <span>with</span> Facebook
+                </button>
+                <div class="line">
+                    <span>OU</span>
+                </div>
+                <form class="" action="index.html" method="post">
+                    <div class="form-field">
+                        <input type="text" name="first-name" autofocus="autofocus" placeholder="First Name" required></div>
+                    <div class="form-field">
+                        <input type="text" name="last-name" placeholder="Last Name" required></div>
+                    <div class="form-field">
+                        <input type="text" name="email" placeholder="Email Address" required></div>
+                    <div class="form-field">
+                        <input type="password" name="password" placeholder="Choose Password" required></div>
+                    <div class="form-field">
+                        <input type="password" name="password-config" placeholder="Password Confirm" required></div>
+                    <div class="form-field">
+                        <input type="checkbox" id="form-agree"><label for="form-agree">Send me Youbike updates and tips</label></div>
+                    <button type="submit" class="form-submit">Create my Account</button>
+                </form>
+                <p>By clicking the button above, you agree to the Terms of Service
+    Xiew our Privacy Policy.</p>
             </div>
         </div>
-    </header>
-    <div class="wrapper">
-        <h1>Cadastre-se</h1>
-        <div class="container">
-            <button class="button-fb clearfix">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-chevron-right"></i>
-                Log In <span>with</span> Facebook
-            </button>
-            <div class="line">
-                <span>OU</span>
-            </div>
-            <form class="" action="index.html" method="post">
-                <div class="form-field">
-                    <input type="text" name="first-name" autofocus="autofocus" placeholder="First Name" required></div>
-                <div class="form-field">
-                    <input type="text" name="last-name" placeholder="Last Name" required></div>
-                <div class="form-field">
-                    <input type="text" name="email" placeholder="Email Address" required></div>
-                <div class="form-field">
-                    <input type="password" name="password" placeholder="Choose Password" required></div>
-                <div class="form-field">
-                    <input type="password" name="password-config" placeholder="Password Confirm" required></div>
-                <div class="form-field">
-                    <input type="checkbox" id="form-agree"><label for="form-agree">Send me Youbike updates and tips</label></div>
-                <button type="submit" class="form-submit">Create my Account</button>
-            </form>
-            <p>By clicking the button above, you agree to the Terms of Service
-Xiew our Privacy Policy.</p>
         </div>
     </div>
 </body>
