@@ -350,6 +350,12 @@ fieldset:nth-of-type(2) legend {
 .wheel-form dd {
     margin-bottom: 6px;
 }
+.three-line {
+    margin-top: -3px;
+}
+dt.three-line+dd {
+    margin-top: 3px
+}
 .wheel-form button {
     margin: -12px 0 7px;
 }
@@ -385,6 +391,7 @@ fieldset:nth-of-type(2) legend {
 .disk-form dt {
     padding-right: 6px;
     letter-spacing: 0.6px;
+    width: 86px;
 }
 .disk-form .search-filters > div{
     margin: 1px 0;
@@ -399,9 +406,6 @@ fieldset:nth-of-type(2) legend {
     border-left: 1px solid #bdc6ca;
     width: 63px;
     margin-top: -15px;
-}
-.disk-form dt {
-    width: 86px;
 }
 .disk-form button {
     margin-top: -5px;
