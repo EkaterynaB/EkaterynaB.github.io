@@ -1,76 +1,105 @@
-var obj = {
-    newElement: function(elem, className, lockalElem, innerText) {
-        var element = document.createElement(elem);
-        var classElem = element.classList.add(className);
-        var path = document.querySelector(lockalElem);
-        element.innerHTML = innerText;
-        path.appendChild(element);
-    },
-    formElement: function(className, lockalElem, innerText) {
-        var element = document.createElement('form');
-        var classElem = element.classList.add(className);
-        var path = document.querySelector(lockalElem);
-        element.setAttribute("action", "");
-        element.setAttribute("method", "post");
+var app = {
+    createElement: function(params) {
+        var element = document.createElement(params.tagName);
 
-        element.innerHTML = innerText;
-        path.appendChild(element);
-    },
-    inputElement: function(lockalElem,  innerText, idInput, value) {
-        var element = document.createElement('input');
-        var path = document.querySelector(lockalElem);
-        var label = document.createElement('label');
-        element.setAttribute("type", 'checkbox');
-        element.id = idInput;
-        element.setAttribute('value', value);
-        path.appendChild(element);
 
-        label.setAttribute('for', idInput);
-        label.innerHTML = innerText;
-        path.appendChild(label);
+        if (params.className) {
+            element.className = params.className;
+        }
+
+        if (params.inputType) {
+            element.setAttribute('type', params.inputType);
+        }
+
+        if (params.content) {
+            element.innerHTML = params.content;
+        }
+
+        if (params.parentElement) {
+            params.parentElement.appendChild(element);
+        }
+
+        if (params.nameValue) {
+            element.setAttribute('value', params.nameValue);
+        }
+
+        if (params.tagName === 'form') {
+            element.setAttribute('action', 'index.html');
+            element.setAttribute('method', 'post');
+        }
+
+        return element
     },
-    submitForm: function() {
-        var button = document.createElement('button');
-        var classElem = button.classList.add("btn");
-        var path = document.querySelector('form');
-        button.setAttribute('value', 'Проверить мои результаты');
-        button.innerHTML = 'Проверить мои результаты';
-        path.appendChild(button);
+    generateQuestion: function(amount, answersAmount) {
+        var ol = this.createElement({
+            tagName: 'ol',
+            parentElement: formElement
+        })
+
+        for (var i = 0; i < amount; i++) {
+
+            var li = this.createElement({
+                tagName: 'li',
+                content: 'Вопрос №' + (i + 1)
+            })
+
+            ol.appendChild(li)
+
+            var ul = this.createElement({
+                tagName: 'ul',
+                className: 'inner__list',
+                parentElement: li
+            })
+
+            for (var j = 0; j < answersAmount; j++) {
+
+                var olLi = this.createElement({
+                    tagName: 'li',
+                    parentElement: ul
+                })
+
+                var label = this.createElement({
+                    tagName: 'label',
+                    content: 'Вариант ответа №' + (j + 1),
+                    parentElement: olLi
+                })
+                var checkbox = this.createElement({
+                    tagName: 'input',
+                    inputType: 'checkbox',
+                    parentElement: label
+                });
+
+                checkbox.parentNode.insertBefore(checkbox, label.childNodes[0]);
+            }
+        };
+
     }
 }
+var body = document.querySelector('body');
 
-obj.newElement('div', 'container', 'body', " ");
-obj.newElement('h1', 'headline', 'div.container', "Тест по программированию");
-obj.formElement('form', 'div.container', " ");
-obj.newElement('ol', 'list', 'form', " ");
-obj.newElement('li', 'item', 'ol', "Вопрос №1");
-obj.newElement('li', 'item', 'ol', "Вопрос №2");
-obj.newElement('li', 'item', 'ol', "Вопрос №3");
-obj.newElement('ul', 'inner__list', 'li', " ");
-obj.newElement('li', 'inner__item', '.inner__list', " ");
-obj.newElement('li', 'inner__item', '.inner__list', " ");
-obj.newElement('li', 'inner__item', '.inner__list', " ");
+var wrapper = app.createElement({
+    tagName: 'div',
+    className: 'wrapper',
+    parentElement: body
+});
 
-obj.inputElement("ul li:first-child", "Вариант ответа №1", "value1.1", 'answ1');
-obj.inputElement("ul li:nth-child(2)", "Вариант ответа №2", "value1.2", 'answ2');
-obj.inputElement("ul li:nth-child(3)", "Вариант ответа №3", "value1.3", 'answ2');
+app.createElement({
+    tagName: 'h1',
+    content: "Тест по программированию",
+    parentElement: wrapper
+});
 
-obj.newElement('ul', 'inner__list', 'ol > li:nth-child(2)', " ");
-obj.newElement('li', 'inner__item', 'li:nth-child(2) ul', " ");
-obj.newElement('li', 'inner__item', 'li:nth-child(2) ul', " ");
-obj.newElement('li', 'inner__item', 'li:nth-child(2) ul', " ");
+var formElement = app.createElement({
+    tagName: 'form',
+    parentElement: wrapper
+});
 
-obj.inputElement("ol>li:nth-child(2) ul li:first-child", "Вариант ответа №1", "value2.1", 'answ1');
-obj.inputElement("ol>li:nth-child(2) ul li:nth-child(2)", "Вариант ответа №2", "value2.2", 'answ2');
-obj.inputElement("ol>li:nth-child(2) ul li:nth-child(3)", "Вариант ответа №3", "value2.3", 'answ2');
+app.generateQuestion(3, 3);
 
-obj.newElement('ul', 'inner__list', 'ol > li:nth-child(3)', " ");
-obj.newElement('li', 'inner__item', 'li:nth-child(3) ul', " ");
-obj.newElement('li', 'inner__item', 'li:nth-child(3) ul', " ");
-obj.newElement('li', 'inner__item', 'li:nth-child(3) ul', " ");
-
-obj.inputElement("ol>li:nth-child(3) ul li:first-child", "Вариант ответа №1", "value3.1", 'answ1');
-obj.inputElement("ol>li:nth-child(3) ul li:nth-child(2)", "Вариант ответа №2", "value3.2", 'answ2');
-obj.inputElement("ol>li:nth-child(3) ul li:nth-child(3)", "Вариант ответа №3", "value3.3", 'answ2');
-
-obj.submitForm();
+app.createElement({
+    tagName: 'input',
+    inputType: 'submit',
+    className: 'check-result',
+    nameValue: 'Проверить мои результаты',
+    parentElement: formElement
+});
