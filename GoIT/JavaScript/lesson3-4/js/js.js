@@ -85,7 +85,7 @@ var wrapper = app.createElement({
 
 app.createElement({
     tagName: 'h1',
-    content: "Тест по программированию",
+    content: 'Тест по программированию',
     parentElement: wrapper
 });
 

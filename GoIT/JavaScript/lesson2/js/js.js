@@ -5,7 +5,7 @@ var flag = false;
 for (var i = 0; i < 5; i ++) {
     arr[i] = prompt("Введите имя пользователя").toLowerCase();
 
-    if (arr[i] == '' || arr[i] == ' ') {
+    if (arr[i] == "" || arr[i] == " ") {
         alert("Введите имя пользователя еще раз");
         i -= i;
     }
