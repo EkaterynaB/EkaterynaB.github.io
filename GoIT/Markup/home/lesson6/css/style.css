@@ -72,7 +72,7 @@ header::after {
 .contacts {
     background: url(../img/phone.png) no-repeat 0 4px;
     padding: 5px 0 2px 25px;
-    font: 18px/20px Arial;
+    font: 18px/20px Arial, Helvetica, sans-serif;
     letter-spacing: 0.4px;
     color: #5e696d;
     float: left;
@@ -285,10 +285,10 @@ header::after {
     overflow: hidden;
 }
 .frame-form:first-child {
-    margin-left: 4px;
+    margin-left: 3px;
 }
 .top-search h2 {
-    font: 12px/14px "Arial Black",  sans-serif;
+    font: 12px/14px "Arial Black", sans-serif;
     color: #114165;
 }
 .heading-center {
@@ -297,7 +297,7 @@ header::after {
 legend {
     font: bold 10px/12px "Arial Black",  sans-serif;
     position: absolute;
-    top: -8px;
+    top: -11px;
     left: 2px;
     color: #154468;
 }
@@ -305,7 +305,7 @@ legend {
     float: left;
     clear: left;
     width: 75px;
-    font: 10px/12px Arial, sans-serif;
+    font: 10px/12px Arial, Helvetica, sans-serif;
 }
 dt.single-line{
     padding-top: 3px;
@@ -315,7 +315,7 @@ dt.single-line span {
 }
 dt span {
     color: #77858b;
-    font: 9px/11px Arial, sans-serif;
+    font: 9px/11px Arial, Helvetica, sans-serif;
     margin-top: -2px;
     display: block;
 }
@@ -342,12 +342,12 @@ fieldset {
 }
 fieldset:not(:first-of-type) {
     margin-left: 30px;
-    padding-top: 7px;
+    padding-top: 5px;
 }
 fieldset:nth-of-type(2) legend {
     right: 6px;
     left: auto;
-    top: -11px;
+    top: -13px;
 }
 .top-search button {
     font-style: italic;
@@ -356,7 +356,7 @@ fieldset:nth-of-type(2) legend {
     border: none;
     background: none;
     text-decoration: underline;
-    margin: 4px 7px 0;
+    margin: 0 7px 0;
     color: #154467;
     cursor: pointer;
 }
@@ -365,7 +365,7 @@ fieldset:nth-of-type(2) legend {
     margin-right: 10px;
 }
 .wheel-form h2{
-    margin-top: 2px;
+    margin-top: 0;
 }
 .wheel-form fieldset {
     padding-top: 7px;
@@ -377,11 +377,8 @@ fieldset:nth-of-type(2) legend {
     margin-top: -3px;
 }
 dt.three-line+dd {
-<<<<<<< HEAD
-    margin-top: 10px
-=======
-    margin-top: 3px
->>>>>>> origin/master
+    margin-top: 10px;
+    margin-top: 3px;
 }
 .wheel-form button {
     margin: -9px 0 7px;
@@ -408,7 +405,7 @@ dt.three-line+dd {
     padding-bottom: 0;
 }
 .disk-form h2 {
-    margin: 2px 0 0 -8px;
+    margin: 0 0 0 -8px;
     letter-spacing: 1.0px;
 }
 .disk-form fieldset{
@@ -438,20 +435,17 @@ dt.three-line+dd {
     width: 63px;
     margin-top: -15px;
 }
-<<<<<<< HEAD
 .right-filter .three-line + dd {
     margin-top: 0;
 }
-=======
->>>>>>> origin/master
 .disk-form button {
-    margin: -6px 3px 0 0;
+    margin: -3px 4px 0 0;
 }
 
 /*CONTENT*/
 
 main {
-    margin-top: 14px;
+    margin-top: 15px;
     overflow: hidden;
 }
 .sidebar {
@@ -464,7 +458,7 @@ main {
     box-shadow: 2px 3px 3px 0px rgba(150, 150, 150, 0.75);
     display: block;
     background: url(../img/paper.png) no-repeat 2px 2px;
-    padding: 5px 0px 5px 27px;
+    padding: 5px 0px 3px 27px;
     font-size: 13px;
     text-transform: uppercase;
     font-weight: normal;
@@ -476,8 +470,8 @@ main {
     border-radius: 20px;
     box-shadow: 2px 3px 3px 0px rgba(150, 150, 150, 0.75);
     display: inline-block;
-    background: url(../img/point.png) no-repeat 5px 2px;
-    padding: 7px 72px 5px 29px;
+    background: url(../img/point.png) no-repeat 2px 2px;
+    padding: 5px 72px 5px 29px;
     text-transform: uppercase;
     font-size: 14px;
 }
@@ -526,7 +520,7 @@ main {
 .sidebar-right h3 {
     margin-top: 0;
     letter-spacing: 0.9px;
-    padding: 5px 0 6px 30px;
+    padding: 5px 0 4px 29px;
     background-position: 4px 1px;
 }
 .sidebar-right li {
@@ -535,12 +529,17 @@ main {
 .sidebar-right .deep-list {
     margin: 8px 7px 11px 27px;
 }
-li span.wheel-cover {
+.wheel-cover {
     padding-bottom: 6px;
 }
 .sidebar-right span {
-    margin-left: 15px;
-    padding: 5px 60px 7px 29px;
+    margin-left: 12px;
+    padding: 5px 60px 5px 29px;
+    background-position: 4px 2px;
+}
+.sidebar-right .wheel-cover {
+    margin-top: -2px;
+    padding: 5px 55px 6px 29px;
 }
 .deep-list label {
     display: inline-block;
@@ -550,12 +549,12 @@ li span.wheel-cover {
     line-height: 16px;
 }
 .products {
-    display: table;
-    padding: 14px 28px 0 23px;
+    overflow: hidden;
+    padding: 14px 28px 4px 23px;
     border-radius: 3px;
     width: 526px;
     box-sizing: border-box;
-    margin: 0 191px;
+    margin: 0 189px;
     background: rgb(229,231,232); /* Old browsers */
     background: -moz-linear-gradient(top, rgba(229,231,232,1) 0%, rgba(183,195,201,1) 49%, rgba(147,167,176,1) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(229,231,232,1) 0%,rgba(183,195,201,1) 49%,rgba(147,167,176,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -571,10 +570,11 @@ figcaption p {
 figcaption p {
     color: #1f2528;
     letter-spacing: 0.3px;
+    line-height: 14px;
 }
 .products a {
-    display: inline-block;
-    margin: 0 30px 20px 0;
+    float: left;
+    margin: 0 30px 18px 0;
     cursor: pointer;
     text-align: center;
 }
@@ -582,19 +582,26 @@ figcaption p {
     margin-right: 0;
 }
 .frame-product {
-    display: table-cell;
-    vertical-align: middle;
     width: 138px;
     height: 128px;
     background: #fff;
     border: 1px solid #a4aeb1;
     border-radius: 8px;
-    text-align: center;
     box-sizing: border-box;
+    position: relative;
+}
+.frame-product img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 .price {
     color: #114165;
-    font: italic bold 16px/18px "Arial";
+    font: italic bold 16px/18px Arial, Helvetica, sans-serif;
     margin: 4px;
 }
 .price span {
@@ -604,12 +611,9 @@ figcaption p {
 /*BRANDS*/
 
 .brands {
-    margin-top: 42px;
+    margin: 42px 116px 0;
     text-align: center;
     height: 49px;
-}
-.brands ul{
-    display: inline-block;
 }
 .brands li {
     float: left;
@@ -625,7 +629,7 @@ footer {
     width: 100%;
     background: #213a4d;
     text-align: center;
-    font: 12px/16px "Arial";
+    font: 12px/16px Arial, Helvetica, sans-serif;
     border: 1px solid #242c3e;
     padding: 9px 0 45px 0;
     border-radius: 1px 1px 0 0;
@@ -650,7 +654,7 @@ footer {
 }
 .bottom-menu li a {
     color: #bec6c9;
-    font: 12px/16px Arial;
+    font: 12px/16px Arial, Helvetica, sans-serif;
 }
 .bottom-menu li a:hover {
     color: #52abcb;
