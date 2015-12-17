@@ -12,7 +12,7 @@ for (var i = 0; i < 5; i++) {
     } else if (arr[i] == null) {
         i = 5;
     }
-    
+
 }
 
 if (arr.length > 1) {
@@ -24,7 +24,10 @@ if (arr.length > 1) {
     }
 
     for (var i = 0; i < arr.length; i++) {
-        newArr[i] = arr[i].toLowerCase();
+        if (arr[i] != null) {
+            newArr[i] = arr[i].toLowerCase();
+        }
+
     }
 
 }
