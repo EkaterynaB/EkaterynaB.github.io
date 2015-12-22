@@ -175,6 +175,7 @@ function restTimer() {
     min = 0;
     sec = 0;
     hours = 0;
+    numbSplit = 1;
 
     while (splits.firstChild) {
         splits.removeChild(splits.firstChild);
