@@ -37,7 +37,7 @@ var app = {
     }
 }
 
-var body = document.querySelector('body');
+var body = document.querySelector("body");
 
 var container = app.createElement({
     tagName: "div",
@@ -54,7 +54,7 @@ var timer = app.createElement({
 
 var buttonStart = app.createElement({
     attributes: {
-        value: 'start',
+        value: "start",
     },
     tagName: "button",
     className: "start btn btn-success btn-lg col-md-4",
@@ -64,7 +64,7 @@ var buttonStart = app.createElement({
 
 var buttonSplit = app.createElement({
     attributes: {
-        value: 'stop',
+        value: "stop",
     },
     tagName: "button",
     className: "split btn btn-danger btn-lg col-md-4",
@@ -74,7 +74,7 @@ var buttonSplit = app.createElement({
 
 var buttonReset = app.createElement({
     attributes: {
-        value: 'reset',
+        value: "reset",
     },
     tagName: "button",
     className: "reset btn btn-warning btn-lg col-md-4",
@@ -182,6 +182,6 @@ function restTimer() {
     }
 }
 
-buttonStart.addEventListener('click', changeButton);
-buttonReset.addEventListener('click', restTimer);
-buttonSplit.addEventListener('click', app.splitTimer);
+buttonStart.addEventListener("click", changeButton);
+buttonReset.addEventListener("click", restTimer);
+buttonSplit.addEventListener("click", app.splitTimer);
