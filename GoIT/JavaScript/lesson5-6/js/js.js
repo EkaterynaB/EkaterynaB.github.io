@@ -34,6 +34,14 @@ var app = {
             parentElementUp: splits
         });
         numbSplit++;
+    },
+    stopTimer: function() {
+        app.createElement({
+            tagName: "h3",
+            className: "stop",
+            content: "stop " + numbSplit + ": "+ timer.innerHTML,
+            parentElementUp: splits
+        });
     }
 }
 
@@ -65,6 +73,7 @@ var buttonStart = app.createElement({
 var buttonSplit = app.createElement({
     attributes: {
         value: "stop",
+        disabled: "disabled"
     },
     tagName: "button",
     className: "split btn btn-danger btn-lg col-md-4",
@@ -156,13 +165,17 @@ function stopInterval() {
 function changeButton() {
 
     if (buttonStart.innerHTML === "start") {
-        buttonStart.innerHTML = "pause";
-        buttonStart.value = "pause";
+        buttonStart.innerHTML = "stop";
+        buttonStart.value = "stop";
         startTimer = setInterval(timeCount, 4);
+        buttonSplit.disabled = false;
     } else {
         buttonStart.innerHTML = "start";
         buttonStart.value = "start";
         stopInterval();
+        app.stopTimer();
+        buttonSplit.disabled = true;
+        numbSplit++;
     }
 }
 
@@ -176,10 +189,7 @@ function restTimer() {
     sec = 0;
     hours = 0;
     numbSplit = 1;
-
-    while (splits.firstChild) {
-        splits.removeChild(splits.firstChild);
-    }
+    splits.innerHTML = "";
 }
 
 buttonStart.addEventListener("click", changeButton);
