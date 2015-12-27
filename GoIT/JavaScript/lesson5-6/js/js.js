@@ -179,7 +179,7 @@ function changeButton() {
     }
 }
 
-function restTimer() {
+function resetTimer() {
     stopInterval();
     timer.innerHTML = "00:00:00.000";
     buttonStart.innerHTML = "start";
@@ -193,5 +193,5 @@ function restTimer() {
 }
 
 buttonStart.addEventListener("click", changeButton);
-buttonReset.addEventListener("click", restTimer);
+buttonReset.addEventListener("click", resetTimer);
 buttonSplit.addEventListener("click", app.splitTimer);
