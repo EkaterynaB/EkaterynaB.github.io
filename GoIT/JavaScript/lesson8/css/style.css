@@ -1,0 +1,19 @@
+#wrapper {
+    margin: 30px auto;
+    width: 600px;
+}
+p {
+    background: rgba(255, 0, 0, 0.5);
+    width: 220px;
+    padding: 5px 0;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 0, 0, 0.8);
+    box-shadow: 0 0 2px 2px #ccc;
+}
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
