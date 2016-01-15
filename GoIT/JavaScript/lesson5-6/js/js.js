@@ -25,27 +25,11 @@ var app = {
         }
 
         return element;
-    },
-    splitTimer: function() {
-        app.createElement({
-            tagName: "h3",
-            className: "split",
-            content: "split " + numbSplit + ": "+ timer.innerHTML,
-            parentElementUp: splits
-        });
-        numbSplit++;
-    },
-    stopTimer: function() {
-        app.createElement({
-            tagName: "h3",
-            className: "stop",
-            content: "stop " + numbSplit + ": "+ timer.innerHTML,
-            parentElementUp: splits
-        });
     }
-}
+};
 
 var body = document.querySelector("body");
+var numbSplit = 1;
 
 var container = app.createElement({
     tagName: "div",
@@ -53,7 +37,7 @@ var container = app.createElement({
     parentElementEnd: body
 });
 
-var timer = app.createElement({
+var timerText = app.createElement({
     tagName: "h3",
     className: "timer",
     content: "00:00:00.000",
@@ -97,101 +81,126 @@ var splits = app.createElement({
     parentElementEnd: container
 });
 
-var date = new Date(0, 0);
-var min = 0;
-var sec = 0;
-var hours = 0;
-var startTimer;
-var numbSplit = 1;
-
-function timeCount() {
-    var hoursNum;
-    var minNum;
-    var secNum;
-    var millisecNumb;
-
-    date.setMilliseconds( date.getMilliseconds() + 4);
-
-    var millisec = date.getMilliseconds();
-
-    if (millisec === 996) {
-        millisec = 0;
-        sec++;
-    }
-
-    if (sec === 60) {
-        sec = 0;
-        min++;
-    }
-
-    if (min === 60) {
-        hours++;
-    }
-
-    if (hours < 10) {
-        hoursNum = "0" + hours;
-    } else {
-        hoursNum = hours;
-    }
-
-    if (min < 10) {
-        minNum = "0" + min;
-    } else {
-        minNum = min;
-    }
-
-    if (sec < 10) {
-        secNum = "0" + sec;
-    } else {
-        secNum = sec;
-    }
-
-    if (millisec < 10) {
-        millisecNumb = "00" + millisec;
-    } else if (millisec < 100) {
-        millisecNumb = "0" + millisec;
-    } else {
-        millisecNumb = millisec;
-    }
-
-    var timerString = hoursNum + ":" + minNum + ":" + secNum + "." + millisecNumb;
-    return timer.innerHTML = timerString;
+function stopTimer() {
+    app.createElement({
+    	tagName: "h3",
+    	className: "stop",
+    	content: "stop " + numbSplit + ": "+ timerText.innerHTML,
+    	parentElementUp: splits
+    });
 }
 
-function stopInterval() {
-    clearInterval(startTimer);
+function splitTimer() {
+	app.createElement({
+		tagName: "h3",
+		className: "split",
+		content: "split " + numbSplit + ": "+ timerText.innerHTML,
+		parentElementUp: splits
+	});
+	numbSplit++;
 }
 
-function changeButton() {
+function Timer() {
+    var timers = this;
+	var date = new Date(0, 0);
+	var min = 0;
+	var sec = 0;
+	var hours = 0;
+	var startTimer;
+    timers.buttonStart = document.getElementsByClassName("start")[0];
+    timers.buttonReset = document.getElementsByClassName("reset")[0];
+    timers.buttonSplit = document.getElementsByClassName("split")[0];
 
-    if (buttonStart.innerHTML === "start") {
-        buttonStart.innerHTML = "stop";
-        buttonStart.value = "stop";
-        startTimer = setInterval(timeCount, 4);
-        buttonSplit.disabled = false;
-    } else {
+    timers.timeCount = function() {
+        var hoursNum;
+        var minNum;
+        var secNum;
+        var millisecNumb;
+
+        date.setMilliseconds( date.getMilliseconds() + 4);
+
+        var millisec = date.getMilliseconds();
+
+        if (millisec === 996) {
+            millisec = 0;
+            sec++;
+        }
+
+        if (sec === 60) {
+            sec = 0;
+            min++;
+        }
+
+        if (min === 60) {
+            hours++;
+        }
+
+        if (hours < 10) {
+            hoursNum = "0" + hours;
+        } else {
+            hoursNum = hours;
+        }
+
+        if (min < 10) {
+            minNum = "0" + min;
+        } else {
+            minNum = min;
+        }
+
+        if (sec < 10) {
+            secNum = "0" + sec;
+        } else {
+            secNum = sec;
+        }
+
+        if (millisec < 10) {
+            millisecNumb = "00" + millisec;
+        } else if (millisec < 100) {
+            millisecNumb = "0" + millisec;
+        } else {
+            millisecNumb = millisec;
+        }
+
+        var timerString = hoursNum + ":" + minNum + ":" + secNum + "." + millisecNumb;
+        return timerText.innerHTML = timerString;
+    };
+    timers.stopInterval = function() {
+        clearInterval(startTimer);
+    };
+    timers.changeButton = function() {
+
+        if (buttonStart.innerHTML === "start") {
+            buttonStart.innerHTML = "stop";
+            buttonStart.value = "stop";
+            startTimer = setInterval(timers.timeCount, 4);
+            buttonSplit.disabled = false;
+        } else {
+            buttonStart.innerHTML = "start";
+            buttonStart.value = "start";
+            timers.stopInterval();
+            stopTimer();
+            buttonSplit.disabled = true;
+            numbSplit++;
+        }
+    };
+    timers.resetTimer =  function() {
+        timers.stopInterval();
+        timerText.innerHTML = "00:00:00.000";
         buttonStart.innerHTML = "start";
         buttonStart.value = "start";
-        stopInterval();
-        app.stopTimer();
-        buttonSplit.disabled = true;
-        numbSplit++;
-    }
+        date = new Date(0, 0);
+        min = 0;
+        sec = 0;
+        hours = 0;
+        numbSplit = 1;
+        splits.innerHTML = "";
+    };
+    timers.init = function() {
+		buttonStart.addEventListener("click", timers.changeButton);
+		buttonReset.addEventListener("click", timers.resetTimer);
+		buttonSplit.addEventListener("click", splitTimer);
+	};
 }
 
-function resetTimer() {
-    stopInterval();
-    timer.innerHTML = "00:00:00.000";
-    buttonStart.innerHTML = "start";
-    buttonStart.value = "start";
-    date = new Date(0, 0);
-    min = 0;
-    sec = 0;
-    hours = 0;
-    numbSplit = 1;
-    splits.innerHTML = "";
-}
-
-buttonStart.addEventListener("click", changeButton);
-buttonReset.addEventListener("click", resetTimer);
-buttonSplit.addEventListener("click", app.splitTimer);
+var timerOne = new Timer();
+timerOne.init();
