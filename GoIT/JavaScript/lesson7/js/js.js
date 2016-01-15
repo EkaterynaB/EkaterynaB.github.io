@@ -34,15 +34,26 @@ $(function() {
 
     $('.tabs2, .tabs3').hide();
 
-    $("li > a").on("click", function(event) {
-        event.preventDefault();
+    // $("li > a").on("click", function(event) {
+    //     event.preventDefault();
+    //     $("li").attr("class","");
+    //     $(this).parent().attr('class', "active");
+    //     var targetPage = "." + $(this).attr('href').slice(1);
+    //     $('.content div').hide();
+    //     $(targetPage).animate({
+    //         height: "show",
+    //     }, "slow");
+    // })
+
+	$("li > a").on("click", function(event) {
+		event.preventDefault();
         $("li").attr("class","");
         $(this).parent().attr('class', "active");
-        var targetPage = "." + $(this).attr('href').slice(1);
+        var indexTab = $(this).parent().index();
         $('.content div').hide();
-        $(targetPage).animate({
-            height: "show",
-        }, "slow");
+        $('.content div').eq(indexTab).animate({
+                height: "show",
+            }, "slow");
     })
 
 
