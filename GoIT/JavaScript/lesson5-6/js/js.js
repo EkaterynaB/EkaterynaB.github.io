@@ -81,24 +81,11 @@ var splits = app.createElement({
     parentElementEnd: container
 });
 
-function stopTimer() {
-    app.createElement({
+var stopTimer =  app.createElement({
     	tagName: "h3",
     	className: "stop",
-    	content: "stop " + numbSplit + ": "+ timerText.innerHTML,
     	parentElementUp: splits
     });
-}
-
-function splitTimer() {
-	app.createElement({
-		tagName: "h3",
-		className: "split",
-		content: "split " + numbSplit + ": "+ timerText.innerHTML,
-		parentElementUp: splits
-	});
-	numbSplit++;
-}
 
 function Timer() {
     var timers = this;
@@ -107,9 +94,11 @@ function Timer() {
 	var sec = 0;
 	var hours = 0;
 	var startTimer;
+    timers.numbSplit = 1;
     timers.buttonStart = document.getElementsByClassName("start")[0];
     timers.buttonReset = document.getElementsByClassName("reset")[0];
     timers.buttonSplit = document.getElementsByClassName("split")[0];
+	timers.splits = document.querySelector(".splits");
 
     timers.timeCount = function() {
         var hoursNum;
@@ -178,7 +167,7 @@ function Timer() {
             buttonStart.innerHTML = "start";
             buttonStart.value = "start";
             timers.stopInterval();
-            stopTimer();
+            timers.addStopText();
             buttonSplit.disabled = true;
             numbSplit++;
         }
@@ -195,10 +184,22 @@ function Timer() {
         numbSplit = 1;
         splits.innerHTML = "";
     };
+	timers.addSplitText = function() {
+        var h3 = document.createElement("h3");
+		timers.splits.insertBefore(h3, timers.splits.children[0]);
+        h3.innerHTML = "split " + timers.numbSplit + ": "+ timerText.innerHTML;
+        timers.numbSplit += 1;
+	};
+    timers.addStopText = function() {
+        var h3 = document.createElement("h3");
+		timers.splits.insertBefore(h3, timers.splits.children[0]);
+        h3.innerHTML = "stop " + timers.numbSplit + ": "+ timerText.innerHTML;
+        timers.numbSplit += 1;
+	};
     timers.init = function() {
 		buttonStart.addEventListener("click", timers.changeButton);
 		buttonReset.addEventListener("click", timers.resetTimer);
-		buttonSplit.addEventListener("click", splitTimer);
+		buttonSplit.addEventListener("click", timers.addSplitText);
 	};
 }
 
