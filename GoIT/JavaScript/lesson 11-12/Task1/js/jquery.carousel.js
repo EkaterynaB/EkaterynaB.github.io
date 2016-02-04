@@ -45,21 +45,30 @@
             rightButton.click();
         }
 
+        function stopOffset() {
+            clearTimeout(run);
+        }
+
+        function startOffset() {
+          run = setTimeout(function tic() {
+            rightOffset();
+            run = setTimeout(tic, settings.speed);
+          }, settings.speed);
+        }
+
         if (settings.autoRun) {
 
-            run = setInterval(rightOffset, settings.speed);
+            startOffset()
 
             $('div[class^=carousel-arrow]').hover(
-                function() {
-                    clearInterval(run);
-                },
-                function() {
-                    run = setInterval(rightOffset, settings.speed);
-                }
-            );
+              function() {
+                stopOffset()
+            }, function() {
+                startOffset()
+            });
 
         } else {
-            clearInterval(run);
+            stopOffset()
         }
 
 
