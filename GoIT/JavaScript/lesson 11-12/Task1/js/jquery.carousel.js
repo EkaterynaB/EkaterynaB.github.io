@@ -18,7 +18,7 @@
         var elementsCount = elementsList.find('li').length;
         var minOffset = - ((elementsCount - settings.elementsOnPage) * widthPict);
         var maxOffset = 0;
-        var widthHider = elementHider.width((settings.elementsOnPage * widthPict) + "px");
+        var widthHider = elementHider.width(settings.elementsOnPage * widthPict);
         var $link = $(this);
         var offsetPicWidth;
         var run;
