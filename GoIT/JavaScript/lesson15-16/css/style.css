@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  padding: 10px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+h1 {
+  text-align: center;
+  display: inline-block;
+}
+form {
+  width: 400px;
+  display: inline-block;
+}
+form div {
+  float: left;
+  width: 70%;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+input[type="text"]:hover {
+  border: 1px solid grey;
+  padding: 6px;
+}
+.getInfor {
+  text-decoration: none;
+  font: 16px/21px Arial, sans-serif;
+  padding: 4px;
+  background: #4285F4;
+  color: white;
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  clear: left;
+}
+
+/*RESULTS*/
+
+.links {
+  color: #1A0DAB;
+  display: block;
+  font-size: 18px;
+}
+main {
+  padding-bottom: 20px;
+  display: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.result {
+  width: 600px;
+  padding-left: 60px;
+}
+.result li {
+  list-style: none;
+  padding-top: 20px;
+}
+.link__url {
+  color: #006621;
+  display: block;
+  font-size: 14px;
+}
+ol > li {
+    display: inline-block;
+    padding-right: 20px;
+}
+.result__link {
+    color: #1A0DAB;
+    cursor: pointer;
+}
