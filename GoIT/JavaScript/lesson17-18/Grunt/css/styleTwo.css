@@ -1,0 +1,25 @@
+.sub-menu {
+	display: none;
+	background-color: #e04b4b;
+	position: absolute;
+	left: 23px;
+	top: 40px;
+	width: 200px;
+}
+.sub-menu li {
+	float: none;
+}
+.sub-menu .sub-menu {
+	top: 0;
+	left: 200px;
+}
+.sub-menu a {
+    border-bottom: solid 1px rgb(200,50,50);
+    margin: 0 10px;
+    padding: 0;
+}
+nav li li.dropdown > a {
+    background-image: url('../img/arrow-right.png');
+    background-position: right 16px;
+    background-repeat: no-repeat;
+}

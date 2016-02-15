@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 14px/18px sans-serif;
+}
+.wrapper {
+	width: 960px;
+	margin: auto;
+}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+nav {
+	background-color: rgb(255, 200, 100);
+}
+li {
+	list-style: none;
+	float: left;
+}
+li a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 0 30px;
+	line-height: 40px;
+}
+nav li.dropdown > a {
+	background: url(../img/arrow-down.png) no-repeat 80% 50%;
+}
+li.dropdown {
+	position: relative;
+}
