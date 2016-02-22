@@ -52,7 +52,7 @@
         function startOffset() {
           run = setTimeout(function tic() {
             rightOffset();
-            run = setTimeout(tic, settings.speed);
+            startOffset();
           }, settings.speed);
         }
 
@@ -60,7 +60,7 @@
 
             startOffset()
 
-            $('div[class^=carousel-arrow]').hover(
+            leftButton.add(rightButton).hover(
               function() {
                 stopOffset()
             }, function() {
