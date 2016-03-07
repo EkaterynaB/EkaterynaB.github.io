@@ -38,6 +38,11 @@ input[type="text"]:hover {
   display: inline-block;
   text-align: center;
   clear: left;
+  border: none;
+  cursor: pointer;
+}
+.getInfor:hover {
+  background: #245ebe;
 }
 
 /*RESULTS*/
@@ -72,4 +77,7 @@ ol > li {
 .result__link {
     color: #1A0DAB;
     cursor: pointer;
+}
+.display-block {
+  display: block;
 }

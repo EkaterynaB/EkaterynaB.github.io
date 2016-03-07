@@ -4,21 +4,37 @@ function GoogleCallback (func, data) {
 
 $(function() {
 
-    $(".getInfor").click(function(event) {
+    $("form").submit(function(event) {
         event.preventDefault();
         googleSearch(0);
     });
 
+    $(".result").on('click', '.result__link', function() {
+        var index = $(this).data('index');
+        googleSearch(index);
+    });
+
     function googleSearch(index) {
 
-        var searchField = $("input:text").val();
-
+        var searchField = $(".search__field").val();
         $.ajax({
-            url: "http://ajax.googleapis.com/ajax/services/search/web?v=1.0&key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&q="+ searchField +"&start="+index+"8&rsz=8&callback=GoogleCallback&context=?",
+            url: "http://ajax.googleapis.com/ajax/services/search/web?v=1.0&key=ABQIAAAACKQaiZJrS0bhr9YARgDqUxQBCBLUIYB7IF2WaNrkYqF0tBovNBQFDtM_KNtb3xQxWff2mI5hipc3lg&q="+ searchField +"&start="+index+"&rsz=8&callback=GoogleCallback&context=?",
             dataType: "jsonp",
             method: "POST",
             success: function(data) {
-                if (data.results.length) {
+              for (var i = 0; i < data.results.length; i++) {
+                var propertyResults = data.results[i].hasOwnProperty('title') && data.results[i].hasOwnProperty('url') && data.results[i].hasOwnProperty('content');
+                if (!(propertyResults)) break;
+              }
+
+              for (var i = 0; i < data.cursor.pages.length; i++) {
+                var propertyPages = data.cursor.pages[i].hasOwnProperty('label');
+                if (!(propertyPages)) break;
+              }
+
+                if (data.hasOwnProperty('results') && data.hasOwnProperty('cursor') &&
+                data.cursor.hasOwnProperty('pages') && data.results.length && data.cursor.pages.length &&
+                propertyResults && propertyPages) {
                     $(".result").empty();
 
                     var ul = document.createElement("ul");
@@ -26,25 +42,19 @@ $(function() {
                     $(".result").append(ul);
                     $(".result").append(ol);
 
-                    $.each(data.results, function(i, val) {
-                        var li = document.createElement("li");
-                        li.innerHTML = "<a href='"+val.url+"' title='"+val.url+"' target='_blank' class='links'>"+val.title+"</a><p><span class='link__url'>"+val.url+"</span>"+val.content+"</p>";
-                        ul.appendChild(li);
-                    });
+                    var list = data.results.map(function (val) {
+                      return "<li><a href='"+val.url +"' title='"+val.url+"' target='_blank' class='links'>"+val.title+"</a><p><span class='link__url'>"+val.url+"</span>"+val.content+"</p></li>";
+                    }).join('');
+                    ul.innerHTML = list;
 
-                    pages = data.cursor.pages.length;
-                    for (var i = 1; i < pages; i++) {
-                        $("ol").append(li);
-                        var li = document.createElement("li");
-                        li.innerHTML = "<a class='result__link'>" + i + "</a>";
-                    }
+                    var pagination = data.cursor.pages.map(function(val, i) {
+                      return "<li><a class='result__link' data-index='"+ i +"'>" + val.label + "</a></li>";
+                    }).join('');
+                    ol.innerHTML = pagination;
 
                     $("ol > li").eq(index).children().css("fontWeight","bolder");
 
-                    $("main").css("display", "block");
-                    $(".result__link").click(function(event) {
-                        googleSearch(event.target.innerHTML-1);
-                    });
+                    $("main").addClass("display-block");
 
                 } else {
                     alert("I didn't find any info according to your request!");
