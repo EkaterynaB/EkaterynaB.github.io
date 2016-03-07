@@ -13,16 +13,16 @@ gulp.task('cssConcat', function() {
   .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('jsUglify', function() {
+gulp.task('jsConcat', function() {
   return gulp.src('./js/*.js')
+  .pipe(concat('js.min.js'))
     .pipe(uglify())
-    .pipe(concat('js.min.js'))
     .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('watch', function() {
   gulp.watch('./css/**/*.css', ['cssConcat']);
-  gulp.watch('./js/**/*.js', ['jsUglify']);
+  gulp.watch('./js/**/*.js', ['jsConcat']);
 });
 
 gulp.task('default', ['cssConcat', 'jsConcat', 'watch']);
