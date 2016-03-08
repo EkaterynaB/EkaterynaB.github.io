@@ -1,8 +1,6 @@
 'use strict';
 (function() {
 
-document.addEventListener('DOMContentLoaded');
-
 var questions = [
     {
       title: "What is HTML?",
@@ -48,7 +46,7 @@ for (var i = 0; i < actualTest.length; i++) {
   }
   if (counter == 2) {
     var span = document.createElement('span');
-    var list = document.getElementsByClassName("question__items")[i];
+    var list = document.querySelectorAll(".question__items")[i];
     span.innerHTML = '(two right answers)';
     list.insertBefore(span, list.children[0]);
     actualTest[i].title += " (two right answers)";
@@ -56,45 +54,16 @@ for (var i = 0; i < actualTest.length; i++) {
 
 }
 
-
-function createModal(correctAnswers, wrongAnswers) {
-    var totalAnswers = answerCorrected.length;
-
-    document.getElementsByClassName("modal")[0].innerHTML = "<p>You have " + correctAnswers + " correct and " + wrongAnswers + " incorrect answers.</p>";
-    var button = document.createElement("a");
-    var path = document.querySelector(".modal");
-    var textResult = document.createElement("p");
-    button.setAttribute('href', "#");
-    button.classList.add('results__close');
-    button.innerHTML = "Close result";
-    path.appendChild(textResult);
-    path.appendChild(button);
-
-
-    if (correctAnswers === totalAnswers) {
-        textResult.innerHTML = "Greate!!! Good job!!!";
-        textResult.classList.add("message__green");
-    } else if (correctAnswers > totalAnswers/2) {
-        textResult.innerHTML = "You should be more attentive.";
-        textResult.classList.add("message__yellow");
-    } else {
-        textResult.innerHTML = "You flunk this test! Try again!";
-        textResult.classList.add("message__red");
-    }
-
-    document.querySelector(".results__close").addEventListener("click", closeModal);
-	}
-
   function closeModal(e) {
 
     e.preventDefault();
 
-    document.getElementsByClassName('modal')[0].style.display = "none";
-    document.getElementsByClassName('overlay')[0].style.display = "none";
+    document.querySelector('.modal').style.display = "none";
+    document.querySelector('.overlay').style.display = "none";
     document.querySelector("p[class^=message]").className = "";
 
     var inputsChecked = document.querySelectorAll('.wrapper .question__items input:checked');
-		[].forEach.call(inputsChecked, function(inputsChecked) {
+		Array.prototype.forEach.call(inputsChecked, function(inputsChecked) {
 			inputsChecked.checked = false;
       inputsChecked.parentElement.classList.remove("wrong");
       inputsChecked.parentElement.classList.remove("right");
@@ -135,11 +104,10 @@ function checkedTest(e) {
   e.preventDefault();
   var rightAnswer = 0;
   var wrongAnswer = 0;
-
+  var answerObj = {Testresult: ["Greate!!! Good job!!!", "You should be more attentive.", "You flunk this test! Try again!"]};
+  var totalAnswers = answerCorrected.length;
   var userAnswer = [];
   var checkedInput = document.querySelectorAll(".question__items input:checked");
-
-
 
   for (var i = 0; i < checkedInput.length; i++) {
 
@@ -162,12 +130,30 @@ function checkedTest(e) {
 
   }
 
-createModal(rightAnswer, wrongAnswer);
-document.getElementsByClassName('modal')[0].style.display = "block";
-document.getElementsByClassName('overlay')[0].style.display = "block";
+  answerObj.right = rightAnswer;
+  answerObj.wrong = wrongAnswer;
+
+  if (rightAnswer === totalAnswers) {
+      answerObj.resultTest = "Greate!!! Good job!!!";
+      answerObj.className = "message__green";
+  } else if (rightAnswer > totalAnswers/2) {
+      answerObj.resultTest = "You should be more attentive.";
+      answerObj.className = "message__yellow";
+  } else {
+      answerObj.resultTest = "You flunk this test! Try again!";
+      answerObj.className = "message__red";
+  }
+
+  var tmpl = _.template(document.getElementById("answer-template").innerHTML);
+  var resultAnswer = tmpl(answerObj);
+
+  document.querySelector(".modal").innerHTML = resultAnswer;
+  document.querySelector('.modal').style.display = "block";
+  document.querySelector('.overlay').style.display = "block";
+  document.querySelector(".results__close").addEventListener("click", closeModal);
 }
 
-document.getElementsByClassName("checked")[0]
+document.querySelector(".checked")
         .addEventListener("click", checkedTest);
 
 })();

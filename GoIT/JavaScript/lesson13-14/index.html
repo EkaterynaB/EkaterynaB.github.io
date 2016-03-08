@@ -30,6 +30,11 @@
       <a href="#" class="checked">Checked</a>
     </form>
 
+  <script type="text/template" id="answer-template">
+    <p>You have <%= right%> correct and <%= wrong %> incorrect answer</p>
+    <p class="<%= className%>"><%= resultTest %></p>
+    <a href="#" class="results__close">Close result</a>
+  </script>
   <script src="js/js.js"></script>
 
 </body>
