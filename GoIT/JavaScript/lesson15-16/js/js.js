@@ -22,9 +22,7 @@ $(function() {
             dataType: "jsonp",
             method: "POST",
             success: function(data) {
-                  if ('results' in data && 'cursor' in data &&
-                  'pages' in data.cursor && data.results.length && data.cursor.pages.length &&
-                  'label' in data.cursor.pages[index] && 'title' in data.results[index] && 'url' in data.results[index] && 'content' in data.results[index]) {
+                  if (data.results && Array.isArray(data.results) && data.cursor && data.cursor.pages && Array.isArray(data.cursor.pages)) {
                     $(".result").empty();
 
                     var ul = document.createElement("ul");
