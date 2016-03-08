@@ -22,19 +22,9 @@ $(function() {
             dataType: "jsonp",
             method: "POST",
             success: function(data) {
-              for (var i = 0; i < data.results.length; i++) {
-                var propertyResults = data.results[i].hasOwnProperty('title') && data.results[i].hasOwnProperty('url') && data.results[i].hasOwnProperty('content');
-                if (!(propertyResults)) break;
-              }
-
-              for (var i = 0; i < data.cursor.pages.length; i++) {
-                var propertyPages = data.cursor.pages[i].hasOwnProperty('label');
-                if (!(propertyPages)) break;
-              }
-
-                if (data.hasOwnProperty('results') && data.hasOwnProperty('cursor') &&
-                data.cursor.hasOwnProperty('pages') && data.results.length && data.cursor.pages.length &&
-                propertyResults && propertyPages) {
+                  if ('results' in data && 'cursor' in data &&
+                  'pages' in data.cursor && data.results.length && data.cursor.pages.length &&
+                  'label' in data.cursor.pages[index] && 'title' in data.results[index] && 'url' in data.results[index] && 'content' in data.results[index]) {
                     $(".result").empty();
 
                     var ul = document.createElement("ul");
