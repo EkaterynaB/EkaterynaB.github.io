@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.wrapper {
+  width: 500px;
+  margin: 30px auto;
+  background: rgb(220, 224, 224);
+  padding: 30px 30px 50px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 50px -8px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 50px -8px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 50px -8px rgba(0,0,0,0.75);
+}
+.todo__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.todo__input {
+  font-size: 0;
+  margin-bottom: 20px
+}
+.todo__value {
+  width: 78%;
+  margin-right: 2%;
+  line-height: 25px;
+  border: none;
+  font-style: italic;
+  background: transparent;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.todo__value:focus {
+  outline: none;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.todo__input button {
+  width: 20%;
+}
+.todo__add {
+  background: rgb(15, 144, 28);
+  color: #fff;
+  border: none;
+  padding: 5px;
+}
+.todo__change {
+  display: none;
+  background: rgb(213, 161, 29);
+  color: #fff;
+  border: none;
+  padding: 5px;
+}
+
+/*ToDo list*/
+
+.todo__item {
+  line-height: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.todo__item-close {
+  text-decoration: line-through;
+}
+.todo__item span {
+  width: 50px;
+  cursor: pointer;
+  text-align: center
+}
+.item-correct {
+  float: right;
+}
+.item-delete {
+  float: right;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  line-height: 20px;
+  margin-top: 5px;
+}
