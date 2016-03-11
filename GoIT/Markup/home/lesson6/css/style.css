@@ -461,14 +461,14 @@ main {
     border-radius: 20px;
     box-shadow: 2px 3px 3px 0px rgba(150, 150, 150, 0.75);
     display: inline-block;
-    background: url(../img/point.png) no-repeat 2px 2px;
-    padding: 7px 72px 4px 30px;
+    background: url(../img/point.png) no-repeat 4px 2px;
+    padding: 7px 75px 4px 30px;
     text-transform: uppercase;
     font-size: 14px;
 }
 .sidebar li:nth-child(2) span {
     padding: 7px 72px 3px 30px;
-    background-position: 2px 1px;
+    background-position: 4px 1px;
 }
 .sidebar li:nth-child(2) .deep-list {
     margin: 0 0 -2px 30px;
@@ -515,7 +515,7 @@ main {
     margin-top: 1px;
 }
 .sidebar-right li:nth-child(2) span {
-    padding: 7px 57px 3px 32px;
+    padding: 8px 54px 3px 30px;
 }
 .sidebar-right h3 {
     margin-top: 0;
@@ -536,9 +536,9 @@ main {
     padding-bottom: 6px;
 }
 .sidebar-right span {
-    margin-left: 12px;
-    padding: 7px 60px 4px 32px;
-    background-position: 3px 1px;
+    margin-left: 16px;
+    padding: 7px 60px 4px 30px;
+    background-position: 4px 1px;
 }
 .sidebar-right .wheel-cover {
     margin-top: -2px;
@@ -556,7 +556,7 @@ main {
     border-radius: 3px;
     width: 526px;
     box-sizing: border-box;
-    margin: 0 189px;
+    margin: 0 192px;
     background: rgb(229,231,232); /* Old browsers */
     background: -moz-linear-gradient(top, rgba(229,231,232,1) 0%, rgba(183,195,201,1) 49%, rgba(147,167,176,1) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(229,231,232,1) 0%,rgba(183,195,201,1) 49%,rgba(147,167,176,1) 100%); /* Chrome10-25,Safari5.1-6 */
