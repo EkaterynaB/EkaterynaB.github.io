@@ -504,7 +504,7 @@ main {
     padding-left: 16px;
     letter-spacing: 0.5px;
     line-height: 25px;
-    background: url(../img/dot-grey.png) no-repeat 6px 47%;
+    background: url(../img/dot-grey.png) no-repeat 6px 55%;
 }
 .deep-list a.active,
 .deep-list li a:hover {
