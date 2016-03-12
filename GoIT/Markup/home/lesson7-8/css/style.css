@@ -81,7 +81,7 @@ img {
 /*HEADER*/
 
 .intro {
-    background: url(../img/bg1.jpg) no-repeat 50% 0;
+    background: url(../img/bg.jpg) no-repeat 50% 0;
     position: relative;
     padding: 66px 0 48px;
 }
@@ -986,10 +986,6 @@ footer .wrapper {
     .updates__list__text {
         width: 217px;
         margin-left: 66px;
-    }
-    .updates__title {
-        width: 216px;
-        overflow: hidden;
     }
     .updates .learn__more {
         margin-right: -27px;
