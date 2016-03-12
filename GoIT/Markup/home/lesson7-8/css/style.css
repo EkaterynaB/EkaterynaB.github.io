@@ -415,7 +415,7 @@ div.updates__list:last-of-type {
     letter-spacing: -0.1px;
     line-height: 24px;
 }
-.updates__titile {
+.updates__title {
     font-family: 'Open Sans Extrabold';
     font-size: 16px;
     line-height: 24px;
@@ -852,8 +852,6 @@ footer .wrapper {
     .news aside:last-of-type {
         margin: auto;
     }
-
-
     .slider__item__info h4 {
         font-size: 30px;
     }
@@ -872,9 +870,8 @@ footer .wrapper {
     .updates__author {
         width: 217px;
     }
-    .updates__list__text h4 {
-        width: 196px;
-        height: 21px;
+    .updates__title {
+        height: 24px;
         overflow: hidden;
     }
     .updates .learn__more {
@@ -990,9 +987,8 @@ footer .wrapper {
         width: 217px;
         margin-left: 66px;
     }
-    .updates__list__text h3 {
+    .updates__title {
         width: 216px;
-        height: 24px;
         overflow: hidden;
     }
     .updates .learn__more {
