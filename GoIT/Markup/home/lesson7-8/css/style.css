@@ -223,7 +223,10 @@ header::after {
     margin-left: 5px;
 }
 .slider__bottom__link.current {
-    background: url(../img/links.png) no-repeat -66px 0;
+    background: url(../img/links1.png) no-repeat -66px 0;
+}
+.slider__bottom__link:hover {
+    background: url(../img/links1.png) no-repeat -66px 0;
 }
 
 
@@ -392,6 +395,11 @@ aside:nth-child(3) .content {
     margin-bottom: 16px;
     overflow: hidden;
 }
+.updates__list img {
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+}
 div.updates__list:last-of-type {
     margin-bottom: 19px;
 }
@@ -531,7 +539,7 @@ footer .wrapper {
         padding: 0 20px;
     }
     .intro {
-        padding: 70px 0 48px;
+        padding: 68px 0 47px;
     }
     header {
         padding: 0 20px;
@@ -548,7 +556,7 @@ footer .wrapper {
     }
     .slider__descr {
         width: 309px;
-        padding: 91px 0 113px;
+        padding: 91px 0 115px;
     }
     .slider__descr h3 {
         font-size: 48px;
@@ -567,7 +575,7 @@ footer .wrapper {
         letter-spacing: -0.2px;
     }
     section.blog {
-        padding: 72px 0 65px;
+        padding: 74px 0 65px;
     }
     .slider__item__img {
         right: 5%;
@@ -617,11 +625,11 @@ footer .wrapper {
         top: 19px;
     }
     .slider__item__info {
-        padding: 26px 28px 34px 43px
+        padding: 25px 28px 40px 43px
     }
     .slider__item__info p {
         margin-top: 5px;
-        height: 151px;
+        height: 146px;
         overflow: hidden;
         line-height: 24px;
         letter-spacing: -0.1px;
@@ -655,14 +663,14 @@ footer .wrapper {
     }
     .brands .wrapper {
         padding-top: 25px;
-        padding-bottom: 23px;
+        padding-bottom: 29px;
         overflow: hidden;
         width: 100%;
     }
     .info .wrapper {
         overflow: hidden;
         padding-top: 98px;
-        padding-bottom: 86px;
+        padding-bottom: 83px;
     }
     .info__box--black {
         width: 29.1667%;
@@ -689,6 +697,7 @@ footer .wrapper {
     }
     footer {
         padding-bottom: 76px;
+        padding-top: 41px;
     }
     .author {
         clear: left;
@@ -945,16 +954,20 @@ footer .wrapper {
         letter-spacing: 0;
     }
     section.blog {
-        padding-top: 67px 0 62px;
+        padding: 67px 0 62px;
     }
     .blog__box p {
         height: 72px;
+    }
+    .blog__box:last-child {
+    padding-top: 36px;
     }
     .slider__item__info img {
         left: -28px;
     }
     .slider__item__info {
-        padding: 21px 28px 28px 34px;
+      padding: 21px 34px 28px 36px;
+      margin-left: 3.3333%;
     }
     .slider__item__info h4 {
         font-size: 24px;
@@ -979,7 +992,7 @@ footer .wrapper {
     }
     .updates__list__text h3 {
         width: 216px;
-        height: 2px;
+        height: 24px;
         overflow: hidden;
     }
     .updates .learn__more {
