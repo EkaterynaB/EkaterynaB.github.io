@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script>
+</head>
+<body>
+  <div class="modal"></div>
+  <div class="overlay"></div>
+  <div class="wrapper">
+    <h1>Programming test</h1>
+    <form action="index.html" method="post">
+      <script type="text/template" id="test-template">
+        <ol>
+          <% for (var i = 0; i < data.length; i++) { %>
+            <li class="question__items"><%= data[i].title %>
+              <ul>
+                <% for (var j = 0; j < data[i]["answer"].length; j++) { %>
+                  <li><label><input type="checkbox" name="quest<%- i+1%>answ<%= j+1 %>" value="<%= j+1 %>"><%= data[i]["answer"][j] %></label></li>
+                <% } %>
+              </ul>
+            </li>
+          <% } %>
+        </ol>
+      </script>
+      <a href="#" class="checked">Checked</a>
+    </form>
+
+  <script type="text/template" id="answer-template">
+    <p>You have <%= right%> correct and <%= wrong %> incorrect answer</p>
+    <p class="<%= className%>"><%= resultTest %></p>
+    <a href="#" class="results__close">Close result</a>
+  </script>
+  <script src="js/js.js"></script>
+
+</body>
+</html>
