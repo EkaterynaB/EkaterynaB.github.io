@@ -470,7 +470,7 @@ div.updates__list:last-of-type {
   height: 121px;
   overflow: hidden;
 }
-.info__box--black:first-of-type h4 {
+.info__box--black:first-child h4 {
     display: none;
 }
 .info__box--black h4 {
@@ -479,7 +479,7 @@ div.updates__list:last-of-type {
     margin-top: -1px;
 }
 .info__box--black span{
-    font: 16px/24px "Gerogia";
+    font: 16px/24px Georgia, 'Times New Roman', serif;
     font-style: italic;
     color: #c5c5c5;
     margin: 16px 0 7px;
@@ -680,7 +680,7 @@ footer .wrapper {
         margin: 13px 0 7px;
     }
 
-    .info__box--black:first-of-type h4 {
+    .info__box--black:first-child h4 {
         display: block;
     }
     .info__box--black span,

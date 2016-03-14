@@ -1,0 +1,19 @@
+.menu__header:hover {
+    border-bottom: 2px solid transparent;
+}
+.menu__header .menu__link:hover {
+    border-bottom: 2px solid #edbfff;
+}
+.blog__box:first-child + * + * {
+    margin-right: 0;
+}
+.news aside:first-child + *  {
+    margin-right: 0;
+}
+.info__box:first-child + * + * {
+    margin-right: 0;
+}
+.info__box:first-child p {
+    height: 121px;
+    overflow: hidden;
+}
