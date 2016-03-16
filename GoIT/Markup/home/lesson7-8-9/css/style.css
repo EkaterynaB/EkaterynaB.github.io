@@ -27,7 +27,7 @@
          url('../fonts/opensans-light-webfont.woff2') format('woff2'),
          url('../fonts/opensans-light-webfont.woff') format('woff'),
          url('../fonts/opensans-light-webfont.ttf') format('truetype');
-    font-weight: lighter;
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -358,13 +358,11 @@ aside:nth-child(3) .content {
 .slider__item__info::after {
     content: "";
     position: absolute;
-    bottom: -18px;
+    bottom: -20px;
     right: 39px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 30px 30px 0;
-    border-color: transparent #ffffff transparent transparent;
+    width: 30px;
+    height: 26px;
+    background: url(../img/triangle.png) no-repeat -11px 4px;
 }
 .slider__item__info img {
     position: absolute;
@@ -405,6 +403,7 @@ div.updates__list:last-of-type {
 }
 .updates h4 {
     margin-bottom: 14px;
+    color: #454545;
 }
 .updates img {
     float: left;
@@ -414,6 +413,9 @@ div.updates__list:last-of-type {
     margin: 0;
     letter-spacing: -0.1px;
     line-height: 24px;
+}
+.updates__list__text {
+    color: #454545;
 }
 .updates__title {
     font-family: 'Open Sans Extrabold';
@@ -430,8 +432,8 @@ div.updates__list:last-of-type {
 
 .brands {
     clear: both;
-    box-shadow: 0 0 0 1px #e6e6e6;
-    border-top: 1px solid #fefefe;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
 }
 .brands .wrapper {
     padding: 24px 58px 29px;
@@ -447,7 +449,7 @@ div.updates__list:last-of-type {
 }
 /*INFO*/
 
-.ingo {
+.info {
     background: #ececec;
 }
 .info .wrapper {
@@ -465,6 +467,7 @@ div.updates__list:last-of-type {
 }
 .info__box p {
     letter-spacing: -0.2px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
 }
 .info__box:first-of-type p {
   height: 121px;
@@ -621,8 +624,8 @@ footer .wrapper {
         margin-right: 8%;
     }
     .slider__item__info img {
-        left: -20px;
-        top: 19px;
+        left: -22px;
+        top: 17px;
     }
     .slider__item__info {
         padding: 25px 28px 40px 43px
@@ -951,7 +954,7 @@ footer .wrapper {
         letter-spacing: 0;
     }
     section.blog {
-        padding: 67px 0 62px;
+        padding: 67px 0 59px;
     }
     .blog__box p {
         height: 72px;
@@ -960,7 +963,8 @@ footer .wrapper {
     padding-top: 36px;
     }
     .slider__item__info img {
-        left: -28px;
+        left: -24px;
+        top: 19px;
     }
     .slider__item__info {
       padding: 21px 34px 28px 36px;
@@ -1005,10 +1009,14 @@ footer .wrapper {
     }
     .brands__item {
         width: 50%;
-        padding-bottom: 60px;
+        padding-bottom: 52px;
     }
     .info,
     footer .menu {
         display: none;
+    }
+    footer {
+        padding-top: 10px;
+        padding-bottom: 135px;
     }
 }
