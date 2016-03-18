@@ -16,7 +16,7 @@ $(function() {
                         itemSelector: '.grid-item',
                         layoutMode: 'packery',
                         packery: {
-                            gutter: 10
+                            gutter: 20
                         }
                     });
                     // $('.grid').isotope({
