@@ -1,7 +1,7 @@
 $(function() {
 
     $.ajax({
-                url: 'http://api.pixplorer.co.uk/image?word=snow&amount=7&size=m',
+                url: 'http://api.pixplorer.co.uk/image?word=snow&amount=7&size=l',
                 type: "GET",
 				dataType: "json",
 				cache: false,

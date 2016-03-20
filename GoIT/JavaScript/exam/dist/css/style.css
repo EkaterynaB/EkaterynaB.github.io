@@ -215,7 +215,7 @@ header {
   display: inline-block;
   overflow: hidden;
   position: absolute;
-  width: 900px; }
+  top: 0px; }
 
 .work__steps {
   width: 300px;
@@ -236,7 +236,7 @@ header {
   content: "";
   position: absolute;
   color: #fff;
-  left: 31px;
+  left: 18px;
   text-align: left; }
 
 .step__pict {
@@ -245,7 +245,7 @@ header {
 
 .step__link {
   top: 67px;
-  padding: 5px 12px;
+  padding: 5px 17px;
   display: block;
   background: #ff4e50;
   border-radius: 25px;
@@ -258,6 +258,12 @@ header {
   top: 105px;
   font: 24px/28px "Montserrat Bold", Arial, Helvetica, sans-serif;
   font-weight: bold; }
+
+.step__link-two {
+  top: 98px; }
+
+.step__title-two {
+  top: 135px; }
 
 .jcarousel-wrapper {
   width: 300px;
@@ -365,8 +371,9 @@ header {
   height: 120px;
   border-radius: 5px; }
   .grid-item img {
-    max-width: 100%;
-    position: absolute; }
+    position: absolute;
+    min-width: 100%;
+    height: 100%; }
   .grid-item span {
     position: absolute;
     color: #fff;
@@ -415,7 +422,7 @@ footer {
 .footer__item {
   font: 14px/20px "Montserrat Bold", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  margin-bottom: 7px; }
+  margin-bottom: 9px; }
 
 .footer__submenu__item {
   display: inline-block;
@@ -425,9 +432,13 @@ footer {
 .footer__submenu li:first-child {
   margin-left: 0px; }
 
+.copyright {
+  padding-top: 5px; }
+
 .copyright span {
   font: 10px/12px "Montserrat Bold", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
+  letter-spacing: 1px;
   color: #ccc; }
 
 .copyright__logo {
@@ -439,7 +450,7 @@ footer {
 
 @media only screen and (max-width: 959px) and (min-width: 768px) {
   .wrapper {
-    width: 768px; }
+    width: 748px; }
 
   .header__wrapper {
     padding: 14px 52px 10px 41px; }
@@ -495,14 +506,22 @@ footer {
     overflow: hidden;
     position: relative;
     float: left;
-    margin-left: 19px;
+    margin-left: 18px;
     border-radius: 5px; }
 
   .jcarousel-wrapper:first-of-type {
     margin-left: 1px; }
 
+  .jcarousel-prev {
+    top: 67px;
+    left: 21px; }
+
+  .jcarousel-next {
+    top: 67px;
+    right: 21px; }
+
   .work__list {
-    width: auto;
+    width: 711px;
     height: auto;
     margin-bottom: 7px;
     position: absolute;
@@ -522,6 +541,21 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden; }
+
+  .step__link, .step__title, .step > p {
+    left: 19px; }
+
+  .step__link {
+    top: 211px; }
+
+  .step__title {
+    top: 248px; }
+
+  .step__link-two {
+    top: 258px; }
+
+  .step__title-two {
+    top: 295px; }
 
   .partners__item {
     width: 50%;
@@ -560,10 +594,10 @@ footer {
     margin-right: 8px; }
 
   .grid-item--width2 {
-    width: 65%; }
+    width: 65.9%; }
 
   .activity__wrapper {
-    padding: 82px 7px 20px 13px; }
+    padding: 82px 0 20px 0; }
 
   .grid-item img {
     width: auto;
@@ -588,14 +622,17 @@ footer {
 
   .footer__submenu__item {
     display: block;
-    text-align: left; }
+    text-align: left;
+    margin-top: 9px;
+    margin-left: 0; }
 
   .footer__submenu {
     margin-top: 12px;
     position: absolute; }
 
   .footer__item {
-    padding-right: 96px; }
+    padding-right: 96px;
+    display: inline-block; }
 
   .copyright {
     float: right;
@@ -690,6 +727,9 @@ footer {
     float: left;
     padding: 0 14px 27px; }
 
+  .grid-item img {
+    min-width: 100%; }
+
   .partners__wrapper {
     margin-top: 67px;
     padding: 20px 0 0; }
@@ -727,18 +767,12 @@ footer {
   .activity__wrapper {
     padding: 82px 7px 20px 13px; }
 
-  .grid-item img {
-    width: auto;
-    min-width: 100%;
-    height: 100%;
-    max-width: none; }
-
   .search__wrapper {
     padding-top: 76px;
     padding-bottom: 70px; }
 
   .footer__wrapper {
-    padding: 31px 0 0 13px;
+    padding: 31px 0 31px 13px;
     overflow: hidden; }
 
   .footer__logo {
