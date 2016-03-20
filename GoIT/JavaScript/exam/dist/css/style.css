@@ -285,11 +285,11 @@ header {
 
 .jcarousel-prev {
   left: 15px;
-  background: url(../../img/arrow_left.png) no-repeat 50% 50%; }
+  background: url(../../dist/img/arrow_left.png) no-repeat 50% 50%; }
 
 .jcarousel-next {
   right: 15px;
-  background: url(../../img/arrow_right.png) no-repeat 50% 50%; }
+  background: url(../../dist/img/arrow_right.png) no-repeat 50% 50%; }
 
 .jcarusel {
   width: 300px;
