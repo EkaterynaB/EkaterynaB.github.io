@@ -9,6 +9,8 @@
   <!-- <script src="js/libs/isotope.pkgd.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>
   <script src="js/libs/packery-mode.pkgd.min.js"></script>
+  <script src="js/libs/jquery.jcarousel.min.js"></script>
+  <script src="js/libs/tmpl.js"></script>
   <script src="js/js.js"></script>
 </head>
 <body>
@@ -32,31 +34,7 @@
         <div class="wrapper__work wrapper">
             <h3 class="work__title title">How Urlaubsgluck works?</h3>
             <div class="jcarousel-wrapper">
-                <ul class="work__list ">
-                    <li class="work__steps step jcarousel">
-                        <img src="dist/img/picOne.jpg" alt="picture" class="step__pict">
-                        <span class="step__link">Step 1</span>
-                        <h4 class="step__title">Sed leo enim, condimentum</h4>
-                        <p>Quisque libero libero, dictum non turpis in, luctus semper
-                            lorem. Donec rhoncus a leo sit amet facilisis.</p>
-                        </li>
-                        <li class="work__steps step jcarousel">
-                            <img src="dist/img/picTwo.jpg" alt="picture" class="step__pict">
-                            <span class="step__link">Step 1</span>
-                            <h4 class="step__title">Sed leo enim, condimentum</h4>
-                            <p>Quisque libero libero, dictum non turpis in, luctus semper
-                                lorem. Donec rhoncus a leo sit amet facilisis.</p>
-                            </li>
-                            <li class="work__steps step jcarousel">
-                                <img src="dist/img/picThree.jpg" alt="picture" class="step__pict">
-                                <span class="step__link">Step 1</span>
-                                <h4 class="step__title">Sed leo enim, condimentum</h4>
-                                <p>Quisque libero libero, dictum non turpis in, luctus semper
-                                    lorem. Donec rhoncus a leo sit amet facilisis.</p>
-                                </li>
-                            </ul>
-            </div>
-            <div class="jcarousel-wrapper">
+                <div class="jcarousel">
             <ul class="work__list">
                 <li class="work__steps step">
                     <img src="dist/img/picOne.jpg" alt="picture" class="step__pict">
@@ -80,32 +58,68 @@
                         lorem. Donec rhoncus a leo sit amet facilisis.</p>
                 </li>
             </ul>
+            <a class = "jcarousel-prev" href="#"></a>
+            <a class = "jcarousel-next" href="#"></a>
+        </div>
+    </div>
+        <div class="jcarousel-wrapper">
+            <div class="jcarousel">
+            <ul class="work__list">
+                <li class="work__steps step">
+                    <img src="dist/img/picOne.jpg" alt="picture" class="step__pict">
+                    <span class="step__link">Step 1</span>
+                    <h4 class="step__title">Sed leo enim, condimentum</h4>
+                    <p>Quisque libero libero, dictum non turpis in, luctus semper
+                        lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                </li>
+                <li class="work__steps step">
+                    <img src="dist/img/picTwo.jpg" alt="picture" class="step__pict">
+                    <span class="step__link">Step 1</span>
+                    <h4 class="step__title">Sed leo enim, condimentum</h4>
+                    <p>Quisque libero libero, dictum non turpis in, luctus semper
+                        lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                </li>
+                <li class="work__steps step">
+                    <img src="dist/img/picThree.jpg" alt="picture" class="step__pict">
+                    <span class="step__link">Step 1</span>
+                    <h4 class="step__title">Sed leo enim, condimentum</h4>
+                    <p>Quisque libero libero, dictum non turpis in, luctus semper
+                        lorem. Donec rhoncus a leo sit amet facilisis.</p>
+                </li>
+            </ul>
+            <a class = "jcarousel-prev" href="#"></a>
+            <a class = "jcarousel-next" href="#"></a>
+        </div>
         </div>
         <div class="jcarousel-wrapper">
-            <ul class="work__list">
-                <li class="work__steps step">
-                    <img src="dist/img/picOne.jpg" alt="picture" class="step__pict">
-                    <span class="step__link">Step 1</span>
-                    <h4 class="step__title">Sed leo enim, condimentum</h4>
-                    <p>Quisque libero libero, dictum non turpis in, luctus semper
-                        lorem. Donec rhoncus a leo sit amet facilisis.</p>
-                </li>
-                <li class="work__steps step">
-                    <img src="dist/img/picTwo.jpg" alt="picture" class="step__pict">
-                    <span class="step__link">Step 1</span>
-                    <h4 class="step__title">Sed leo enim, condimentum</h4>
-                    <p>Quisque libero libero, dictum non turpis in, luctus semper
-                        lorem. Donec rhoncus a leo sit amet facilisis.</p>
-                </li>
-                <li class="work__steps step">
-                    <img src="dist/img/picThree.jpg" alt="picture" class="step__pict">
-                    <span class="step__link">Step 1</span>
-                    <h4 class="step__title">Sed leo enim, condimentum</h4>
-                    <p>Quisque libero libero, dictum non turpis in, luctus semper
-                        lorem. Donec rhoncus a leo sit amet facilisis.</p>
-                </li>
-            </ul>
-        </div>
+            <div class="jcarousel">
+        <ul class="work__list">
+            <li class="work__steps step">
+                <img src="dist/img/picOne.jpg" alt="picture" class="step__pict">
+                <span class="step__link">Step 1</span>
+                <h4 class="step__title">Sed leo enim, condimentum</h4>
+                <p>Quisque libero libero, dictum non turpis in, luctus semper
+                    lorem. Donec rhoncus a leo sit amet facilisis.</p>
+            </li>
+            <li class="work__steps step">
+                <img src="dist/img/picTwo.jpg" alt="picture" class="step__pict">
+                <span class="step__link">Step 1</span>
+                <h4 class="step__title">Sed leo enim, condimentum</h4>
+                <p>Quisque libero libero, dictum non turpis in, luctus semper
+                    lorem. Donec rhoncus a leo sit amet facilisis.</p>
+            </li>
+            <li class="work__steps step">
+                <img src="dist/img/picThree.jpg" alt="picture" class="step__pict">
+                <span class="step__link">Step 1</span>
+                <h4 class="step__title">Sed leo enim, condimentum</h4>
+                <p>Quisque libero libero, dictum non turpis in, luctus semper
+                    lorem. Donec rhoncus a leo sit amet facilisis.</p>
+            </li>
+        </ul>
+        <a class = "jcarousel-prev" href="#"></a>
+        <a class = "jcarousel-next" href="#"></a>
+    </div>
+</div>
         </div>
     </section>
     <section class="partners">
@@ -164,8 +178,8 @@
                 <h3 class="search__title title">Discover holiday activity ideas</h3>
                 <p class="subtitle subtitle-black search__subtitle">Hi! What are your holiday interests?</p>
                 <form action="index.html" class="form search__form">
-                    <input type="text" placeholder="Enter your interest">
-                    <a href="" class="button-red search__button">Search parthners</a>
+                    <input class="input__form" type="text" placeholder="Enter your interest">
+                    <button class="button-red search__button">Search parthners</button>
                 </form>
             </div>
         </section>
@@ -191,6 +205,21 @@
         </footer>
 
 
+        <script type="text/template" id="activity__template">
+<div class="grid">
+            <% for (var i = 0; i < data.images.length; i++) { %>
 
+                     <div class="grid-item
+                     <% if (i === 4 || i === 5) { %>
+                      grid-item--width2
+                      <% } %>
+                      ">
+                         <img src="<%= data.images[i].imageurl %>">
+                         <span><%= data.images[i].word %></span>
+                     </div>
+
+            <% } %>
+        </div>
+        </script>
 </body>
 </html>
