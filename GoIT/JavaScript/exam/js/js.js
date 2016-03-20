@@ -7,11 +7,17 @@ $(function() {
 				cache: false,
                 success: function(data){
                     console.log(data);
-                    var list = data.images.map(function (val) {
-                      return "<div class='grid-item'><img src='"+val.imageurl+"'><span>"+val.word+"</span></div>";
-                    }).join('');
+                    // var list = data.images.map(function (val) {
+                    //   return "<div class='grid-item'><img src='"+val.imageurl+"'><span>"+val.word+"</span></div>";
+                    // }).join('');
 
-                    $(".grid").append(list);
+
+                    console.log(data);
+                    var piclist = tmpl($('#activity__template').html(), {data: data});
+                    $('.activity__wrapper').append(piclist);
+
+
+                    // $(".grid").append(list);
                     $('.grid').isotope({
                         itemSelector: '.grid-item',
                         layoutMode: 'packery',
@@ -29,6 +35,20 @@ $(function() {
                 }
             });
 
-            var allItem = $("img");
-            console.log($(".grid-item img").height());
+
+
+            $('.jcarousel').jcarousel({
+    			animation: 'slow',
+    			wrap: 'circular'
+    		})
+
+		$('.jcarousel-prev')
+            .jcarouselControl({
+				target: '-=1'
+			});
+
+		$('.jcarousel-next')
+            .jcarouselControl({
+				target: '+=1'
+			});
 })
