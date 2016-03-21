@@ -538,8 +538,8 @@ footer {
     width: auto;
     display: block;
     position: relative;
-    // left: -31%;
     left: 50%;
+    // left: -31%;
     transform: translateX(-50%);
     overflow: hidden; }
 
