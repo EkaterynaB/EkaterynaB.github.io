@@ -13,6 +13,9 @@
        padding: 10px 10px;
        height: auto;
     }
+    .jcarousel-wrapper {
+      margin-left: 10px;
+    }
 }
 /*.wrapper {
   width: 960px;
