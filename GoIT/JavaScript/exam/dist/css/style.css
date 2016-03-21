@@ -448,7 +448,7 @@ footer {
   height: 24px;
   background: url("../img/design.png") center center no-repeat; }
 
-@media only screen and (max-width: 959px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .wrapper {
     width: 748px; }
 
@@ -637,7 +637,7 @@ footer {
   .copyright {
     float: right;
     margin-right: 29px; } }
-@media only screen and (min-width: 959px) {
+@media screen and (min-width: 959px) {
   .wrapper {
     width: 960px;
     padding: 12px 10px; }

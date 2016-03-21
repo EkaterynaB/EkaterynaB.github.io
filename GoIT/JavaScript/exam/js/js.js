@@ -25,7 +25,7 @@ $(function() {
 
     }
 
-    getImagesByRequest('snowboarding');
+    getImagesByRequest();
     var buttonSearch = $('.search__button');
 
     $('.search__button').click(function(e) {
@@ -51,8 +51,8 @@ $(function() {
 
             function init() {
                 getImagesByRequest();
-                formActivity.addEventListener('submit', getUserQuery);
+                //formActivity.addEventListener('submit', getUserQuery);
             }
-
-            document.addEventListener('DOMContentLoaded', init);
+init();
+            // document.addEventListener('DOMContentLoaded', init);
 })
