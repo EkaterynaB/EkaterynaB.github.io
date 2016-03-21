@@ -539,7 +539,7 @@ footer {
     display: block;
     position: relative;
     left: 50%;
-    // left: -31%;
+    // margin-left: -35%;
     transform: translateX(-50%);
     overflow: hidden; }
 
