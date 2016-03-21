@@ -2,6 +2,17 @@
     .step__pict {
         margin-left: -50%;
     }
+    .jcarousel-wrapper {
+      border-radius: 0;
+      }
+      .search__button {
+        margin-top: 0;
+      }
+   .search__form input {
+       vertical-align: top;
+       padding: 10px 10px;
+       height: auto;
+    }
 }
 /*.wrapper {
   width: 960px;
