@@ -538,8 +538,7 @@ footer {
     width: auto;
     display: block;
     position: relative;
-    // left: 0;
-    // margin-left: -32%;
+    // left: -31%;
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden; }
