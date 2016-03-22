@@ -8,15 +8,15 @@ $(function() {
             dataType: "json",
             cache: false,
             success: function(data){
-                $(".grid").empty();
+                $(".grid").remove();
                 var piclist = tmpl($('#activity__template').html(), {data: data});
-                $('.activity__wrapper').append(piclist);
+                $('.activity .wrapper').append(piclist);
 
                 $('.grid').isotope({
                     itemSelector: '.grid-item',
                     layoutMode: 'packery',
                     packery: {
-                        gutter: 20
+                        gutter: 0
                     }
                 });
 
@@ -49,10 +49,6 @@ $(function() {
 				target: '+=1'
 			});
 
-            function init() {
-                getImagesByRequest();
-                //formActivity.addEventListener('submit', getUserQuery);
-            }
-init();
-            // document.addEventListener('DOMContentLoaded', init);
+            getImagesByRequest();
+
 })
