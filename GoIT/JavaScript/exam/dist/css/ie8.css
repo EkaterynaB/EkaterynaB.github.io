@@ -1,10 +1,7 @@
 .step__pict {
-    margin-left: -30px;
+    margin-left: -50%;
 }
 @media screen and (min-width: 768px)  {
-    .step__pict {
-       margin-left: -50px;
-    }
     .jcarousel-wrapper {
         border-radius: 0;
     }
