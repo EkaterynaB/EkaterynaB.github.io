@@ -131,7 +131,7 @@ p {
   background-size: cover; }
 
 .wrapper {
-  width: 320px;
+  max-width: 320px;
   margin: 0 auto;
   padding: 0 10px;
   box-sizing: border-box; }
@@ -207,11 +207,9 @@ header {
 .work__list {
   display: inline-block;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   top: 0px;
-  width: 900px;
-  left: -600px;
-  top: 0px; }
+  width: 900px; }
 .work__steps {
   width: 300px;
   height: 240px;
@@ -263,10 +261,14 @@ header {
 .jcarousel-wrapper {
   width: 300px;
   height: 240px;
-  overflow: hidden;
   margin: 9px auto 0;
   position: relative;
   border-radius: 5px; }
+
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%; }
 
 .jcarousel-wrapper:first-child {
   margin-top: 0; }
@@ -437,9 +439,9 @@ footer {
     height: 24px;
     background: url("../img/design.png") center center no-repeat; }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .wrapper {
-    width: 768px;
+    max-width: 768px;
     overflow: hidden; }
 
   .header__logo {
@@ -480,10 +482,7 @@ footer {
   .work__list {
     width: 711px;
     height: auto;
-    margin-bottom: 7px;
-    position: absolute;
-    top: 0;
-    left: 0; }
+    margin-bottom: 7px; }
   .work__steps {
     width: 237px;
     height: 400px;
@@ -575,7 +574,8 @@ footer {
     padding: 34px 0 0 40px; }
   .footer__logo {
     float: left;
-    margin-right: 85px; }
+    margin-right: 85px;
+    margin-top: 0px; }
   .footer__list {
     float: left;
     text-align: left; }
@@ -585,24 +585,27 @@ footer {
     margin-top: 9px;
     margin-left: 0; }
   .footer__submenu {
-    margin-top: 12px;
+    margin-top: 3px;
     position: absolute; }
   .footer__item {
     padding-right: 96px;
     display: inline-block; }
 
+  .form {
+    margin-bottom: 90px; }
+
   .copyright {
     float: right;
     margin-right: 29px; } }
-@media screen and (min-width: 960px) {
+@media only screen and (min-width: 960px) {
   .wrapper {
-    width: 960px; }
+    max-width: 960px; }
 
   .button {
     padding: 8px 16px; }
 
   header {
-    padding-bootm: 140px; }
+    padding-bottom: 140px; }
 
   .header__logo {
     margin-left: 0px; }
@@ -657,11 +660,7 @@ footer {
     top: 265px; }
 
   .work__list {
-    width: 900px;
-    margin-bottom: 7px;
-    position: absolute;
-    top: 0;
-    left: 0; }
+    width: 900px; }
 
   .work__steps {
     width: 300px;
