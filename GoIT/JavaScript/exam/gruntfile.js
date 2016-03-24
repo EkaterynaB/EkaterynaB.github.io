@@ -3,19 +3,20 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     concat: {
-      js: {
-        src: ['js/js.js'],
-        dest: 'dist/js.min.js'
-      },
-      css: {
-        src: ['styles/*.css'],
-        dest: 'dist/css.min.css'
+    options: {
+      separator: ';',
+    },
+      dist: {
+        src: ['src/js/libs/jquery.min.js',
+        'src/js/libs/*.js',
+         'src/js/*.js'],
+        dest: 'dist/js/js.min.js'
       }
     },
     uglify: {
       my_target: {
         files: {
-          'dist/js.min.js': ['dist/js.min.js']
+          'dist/js/js.min.js': ['dist/js/js.min.js']
         }
       }
     },
@@ -23,10 +24,10 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'styles',
+          cwd: 'src/styles',
           src: ['*.scss'],
           dest: 'dist/css',
-          ext: '.css'
+          ext: '.min.css'
         }]
       }
     },
@@ -37,13 +38,13 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'dist/css.min.css': ['dist/css.min.css']
+          'dist/css/style.min.css': ['dist/css/style.min.css']
         }
       }
     },
     watch: {
          sass: {
-           files: ['styles/*.scss'],
+           files: ['src/styles/*.scss'],
            tasks: ['sass'],
          }
      },
@@ -59,12 +60,24 @@ module.exports = function(grunt) {
     },
     copy: {
       main: {
-          expand: true,
-          cwd: 'styles/core/font',
-          src: '**',
-          dest: 'dist/css/font',
-          flatten: true,
-          filter: 'isFile',
+          files: [
+              {
+                  expand: true,
+                  cwd: 'src/styles/core/font',
+                  src: '**',
+                  dest: 'dist/css/font',
+                  flatten: true,
+                  filter: 'isFile'
+              },
+              {
+                  expand: true,
+                  cwd: 'src/js/ie',
+                  src: '**',
+                  dest: 'dist/js/ie',
+                  flatten: true,
+                  filter: 'isFile'
+              }
+          ],
       },
     },
       });
@@ -79,5 +92,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task(s).
-  grunt.registerTask('default', ["concat", 'uglify', 'sass', "cssmin, imagemin, copy"]);
+  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin']);
 };
