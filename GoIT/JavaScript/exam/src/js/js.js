@@ -8,7 +8,7 @@ $(function() {
             dataType: "json",
             cache: false,
             success: function(data){
-
+console.log(data);
                 if (data.hits) {
                     $(".grid").remove();
                     var piclist = tmpl($('#activity__template').html(), {data: data});
