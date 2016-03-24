@@ -3,45 +3,38 @@ $(function() {
     function getImagesByRequest(phrase) {
 
         $.ajax({
-            url: 'https://pixabay.com/api/?key=2271973-553054d4a3087a5229bd26af2&q=' + phrase + '&orientation=horizontal&image_type=photo&min_width=410&min_height=620&per_page=7',
-            type: "GET",
-            dataType: "json",
-            cache: false,
-            success: function(data){
-                console.log(data);
-                if (data.hits) {
-                    $(".grid").remove();
-                    var piclist = tmpl($('#activity__template').html(), {data: data});
-                    $('.activity .wrapper').append(piclist);
+        url: 'http://api.pixplorer.co.uk/image?word='+ phrase +'&amount=7&size=l',
+        type: "GET",
+        dataType: "json",
+        cache: false,
+        success: function(data){
+            $(".grid").remove();
+            var piclist = tmpl($('#activity__template').html(), {data: data});
+            $('.activity .wrapper').append(piclist);
 
-                    $('.grid').isotope({
-                        itemSelector: '.grid-item',
-                        layoutMode: 'packery',
-                        packery: {
-                            gutter: 0
-                        }
-                    });
-
-                } else {
-                    $('.activity .wrapper').append("<p>Sorry. Something on the server has crashed</p>");
+            $('.grid').isotope({
+                itemSelector: '.grid-item',
+                layoutMode: 'packery',
+                packery: {
+                    gutter: 0
                 }
-            }
-        });
+            });
 
-    }
+        }
+    });
 
-    var inputWords = ['sun', 'snow', 'snowboard', 'flowers', 'forest', 'fishing', 'sea', 'mountain'];
-    var randomWords = Math.floor(Math.random() * inputWords.length);
-    getImagesByRequest(inputWords[randomWords]);
-    var buttonSearch = $('.search__button');
-
-    $('.search__button').click(function(e) {
-        e.preventDefault();
-        var searchField = $(".input__form").val();
-        getImagesByRequest(searchField);
-    })
+}
 
 
+
+getImagesByRequest();
+var buttonSearch = $('.search__button');
+
+$('.search__button').click(function(e) {
+    e.preventDefault();
+    var searchField = $(".input__form").val();
+    getImagesByRequest(searchField);
+})
 
             $('.jcarousel').jcarousel({
     			animation: 'slow',
