@@ -1,0 +1,27 @@
+.step__pict {
+    margin-left: -30px;
+}
+@media screen and (min-width: 768px)  {
+    .step__pict {
+        margin-left: -70%;
+    }
+    .jcarousel-wrapper {
+        border-radius: 0;
+    }
+    .search__button {
+        margin-top: 0;
+    }
+    .search__form input {
+        vertical-align: top;
+        padding: 10px 10px;
+        height: auto;
+    }
+    .jcarousel-wrapper {
+        margin-left: 10px;
+    }
+}
+@media screen and (min-width: 960px)  {
+    .step__pict {
+        margin-left: -50%;
+    }
+}

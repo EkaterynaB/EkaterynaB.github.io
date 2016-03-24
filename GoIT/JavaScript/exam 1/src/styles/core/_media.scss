@@ -1,0 +1,381 @@
+@media only screen and (min-width: 768px)  {
+    .wrapper {
+        max-width: 768px;
+        overflow: hidden;
+    }
+    .header {
+        &__logo {
+            margin-top: 8px;
+            float: left;
+            margin-left: 38px;
+        }
+        &__actions {
+            float: right;
+            margin-right: 42px;
+        }
+        &__title {
+            font-size: 52px;
+            line-height: 63px;
+        }
+        &__content {
+            margin: 0 auto;
+            width: 552px;
+            box-sizing: border-box;
+        }
+        &__subtitle {
+            margin-top: 23px;
+            font-size: 24px;
+            line-height: 26px;
+        }
+        &__button {
+            margin-bottom: 233px;
+        }
+    }
+    header {
+        overflow: hidden;
+        padding: 38px 0 141px;
+    }
+    .button-red {
+        margin-top: 36px;
+        width: 222px;
+    }
+
+    //WORK
+
+    .title {
+        margin-top: 97px;
+        margin-bottom: 25px;
+    }
+    .work {
+        &__steps {
+            float: left;
+        }
+        &__list {
+            width: 711px;
+            height: auto;
+            margin-bottom: 7px;
+        }
+        &__steps {
+            width: 237px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+    }
+    .jcarousel-wrapper {
+        width: 237px;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+        float: left;
+        margin-left: 18px;
+        border-radius: 5px;
+    }
+    .jcarousel-wrapper:first-of-type {
+        margin-left: 0;
+    }
+    .jcarousel-prev {
+        top: 67px;
+        left: 21px
+    }
+    .jcarousel-next {
+        top: 67px;
+        right: 21px
+    }
+    .step {
+        &__pict {
+            width: auto;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+        &__link,
+        &__title,
+        & > p {
+            left: 19px;
+        }
+        &__link {
+            top: 211px;
+        }
+        &__title {
+            top: 248px;
+        }
+        &__link-two {
+            top: 258px;
+        }
+        &__title-two {
+            top: 295px;
+        }
+    }
+    .partners {
+        &__item {
+            width: 50%;
+            float: left;
+            padding: 0 18px;
+        }
+        &__title {
+            margin-bottom: 31px;
+        }
+        &__list {
+            overflow: hidden;
+            margin: 0 auto 37px;
+            width: 505px;
+        }
+        &__button {
+            width: 190px;
+            margin: 41px auto 0;
+            display: block;
+        }
+    }
+
+    // ACTIVITY
+
+    .activity__title {
+        margin-bottom: 34px;
+    }
+    .grid {
+        margin: -20px 0 0 -20px;
+    }
+    .grid-item {
+        width: 30.7%;
+        height: 309px;
+        margin: 2.605% 0 0 2.605%;
+        box-sizing: border-box;
+    }
+    .search {
+        &__title {
+            margin-bottom: 32px;
+        }
+        &__subtitle {
+            margin-bottom: 1px;
+        }
+        &__button {
+            width: 160px;
+        }
+        &__form input {
+            width: 223px;
+            margin-right: 8px;
+        }
+
+    }
+    .grid-item--width2 {
+        width: 63.9%;
+    }
+    .grid-item img {
+        width: auto;
+        min-width: 100%;
+        height: 100%;
+        max-width: none;
+    }
+    .footer {
+        &__wrapper {
+            padding: 34px 0 0 34px;
+        }
+        &__logo {
+            float: left;
+            margin-right: 85px;
+            margin-top: 0px;
+        }
+        &__list {
+            float: left;
+            text-align: left;
+        }
+        &__submenu__item {
+            display: block;
+            text-align: left;
+            margin-top: 9px;
+            margin-left: 0;
+        }
+        &__submenu {
+            margin-top: 3px;
+            position: absolute;
+        }
+        &__item {
+            padding-right: 100px;
+            display: inline-block;
+        }
+    }
+    .form {
+        margin-bottom: 90px;
+    }
+    .copyright {
+        float: right;
+        margin-right: 34px;
+    }
+}
+
+@media only screen and (min-width:  960px) {
+    .wrapper {
+        max-width: 960px;
+    }
+    .button {
+        padding: 8px 16px;
+    }
+    header {
+        padding-bottom: 140px
+    }
+    .header {
+        &__logo {
+            margin-left: 0px;
+        }
+        &__actions {
+            margin-right: 0;
+        }
+        &__title {
+            font-size: 52px;
+            line-height: 63px;
+        }
+        &__subtitle {
+            margin-top: 23px;
+            font-size: 24px;
+            line-height: 26px;
+        }
+        &__button {
+            margin-bottom: 233px;
+        }
+    }
+    .button-red {
+        margin-top: 36px;
+        width: 222px;
+    }
+
+    //WORK
+
+    .wrapper__work {
+        margin-top: 82px;
+        padding: 12px 9px 0 11px;
+    }
+    .title {
+        margin-bottom: 23px;
+    }
+    .work__steps {
+        float: left;
+    }
+    .wrapper__work {
+      overflow: hidden;
+    }
+    .jcarousel-wrapper {
+        width: 300px;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+        float: left;
+        margin-left: 19px;
+        border-radius: 5px;
+    }
+    .jcarousel-wrapper:first-of-type {
+        margin-left: 1px;
+    }
+    .jcarousel-prev,
+    .jcarousel-next {
+        top: 180px;
+    }
+    .step {
+        &__link {
+        top: 228px;
+        }
+        &__title {
+            top: 265px;
+        }
+    }
+
+    .work__list {
+        width: 900px;
+    }
+    .work__steps {
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+    }
+    .grid-item img {
+        min-width: 100%;
+    }
+    .partners {
+        &__item {
+            width: 25%;
+            float: left;
+            padding: 0 14px;
+        }
+        &__title {
+            margin-bottom: 31px;
+        }
+        &__list {
+            overflow: hidden;
+            margin-bottom: 11px;
+            width: 100%;
+        }
+        &__button {
+            width: 187px;
+            line-height: 37px;
+            padding: 0;
+            margin-top: 0;
+        }
+    }
+    .grid-item {
+        width: 31.25%;
+        height: 310px;
+        margin: 2.084% 0 0 2.084%;
+        box-sizing: border-box;
+        &--width2 {
+            width: 64.584%;
+        }
+    }
+    .search {
+        &__title {
+            margin-bottom: 32px;
+        }
+        &__subtitle {
+            margin-bottom: 1px;
+        }
+        &__button {
+            width: 160px;
+        }
+        &__form {
+            margin-bottom: 89px;
+            & input {
+                width: 223px;
+                margin-right: 8px;
+            }
+        }
+    }
+
+    // ACTIVITY
+
+    .activity__title {
+        margin-bottom: 34px;
+    }
+    .footer {
+        &__wrapper {
+            padding: 33px 0 31px 11px;
+            overflow: hidden;
+        }
+        &__logo {
+            float: left;
+            margin-right: 99px;
+            margin-top: 2px;
+        }
+        &__list {
+            float: left;
+            text-align: left;
+            margin-top: 4px;
+        }
+        &__submenu {
+            margin-top: 2px;
+        }
+        &__submenu__item {
+            display: block;
+            text-align: left;
+            margin-top: 9px;
+            margin-left: 0;
+        }
+        &__item {
+            padding-right: 88px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+    .copyright {
+        float: right;
+        margin-right: 10px;
+    }
+}

@@ -213,14 +213,14 @@
     </footer>
     <script type="text/template" id="activity__template">
         <div class="grid">
-            <% console.log(data); for (var i = 0; i < data.hits.length; i++) { %>
-                <% if (i === 4 || i === 5) { %>
+            <% console.log(data); for (var i = 0; i < data.images.length; i++) { %>
+                <% if (i === 4 || i === 5) {  %>
                  <div class="grid-item grid-item--width2">
                 <% } else { %>
                      <div class="grid-item">
                 <% } %>
-                     <img src="<%= data.hits[i].webformatURL %>">
-                     <span><%= data.hits[i].tags.slice(0, data.hits[i].tags.indexOf(',')) %></span>
+                     <img src="<%= data.images[i].imageurl %>">
+                     <span><%= data.images[i].word %></span>
                  </div>
             <% } %>
         </div>
