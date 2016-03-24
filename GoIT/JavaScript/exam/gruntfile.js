@@ -8,8 +8,12 @@ module.exports = function(grunt) {
     },
       dist: {
         src: ['src/js/libs/jquery.min.js',
-        'src/js/libs/*.js',
-         'src/js/*.js'],
+        'src/js/libs/isotope.pkgd.min.js',
+        'src/js/libs/packery-mode.pkgd.min.js',
+        'src/js/libs/jquery.jcarousel.min.js',
+        'src/js/libs/tmpl.js',
+        'src/js/libs/jquery.xdomainrequest.min.js',
+        'src/js/*.js'],
         dest: 'dist/js/js.min.js'
       }
     },
