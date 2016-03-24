@@ -9,7 +9,7 @@ $(function() {
                 cache: false,
                 success: function(data){
 
-                    if (data.hits && Array.isArray(data.hits)) {
+                    if (data.hits) {
                         $(".grid").remove();
                         var piclist = tmpl($('#activity__template').html(), {data: data});
                         $('.activity .wrapper').append(piclist);
