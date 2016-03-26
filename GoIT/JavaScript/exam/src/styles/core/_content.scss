@@ -4,6 +4,7 @@ $fontText: 14px/16px "Roboto Light", Arial, Helvetica, sans-serif;
 $fontTitle: 30px/36px "Montserrat Bold", Arial, Helvetica, sans-serif;
 $fontButton: 14px/20px "Montserrat Bold", Arial, Helvetica, sans-serif;
 
+
 a {
     text-decoration: none;
 }
@@ -19,7 +20,7 @@ p {
     background-size: cover;
 }
 .wrapper {
-    width: 320px;
+    min-width: 320px;
     margin: 0 auto;
     padding:  0 10px;
     box-sizing: border-box;

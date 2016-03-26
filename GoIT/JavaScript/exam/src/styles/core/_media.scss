@@ -1,4 +1,4 @@
-@media only screen and (min-width: 788px)  {
+@media only screen and (min-width: 768px)  {
     .wrapper {
         width: 768px;
         overflow: hidden;
@@ -47,20 +47,17 @@
         margin-bottom: 25px;
     }
     .work {
-        &__steps {
-            float: left;
-        }
         &__list {
             width: 711px;
             height: auto;
             margin-bottom: 7px;
         }
         &__steps {
+            float: left;
             width: 237px;
             height: 400px;
             overflow: hidden;
         }
-
     }
     .jcarousel-wrapper {
         width: 237px;
@@ -204,7 +201,7 @@
     }
 }
 
-@media only screen and (min-width:  980px) {
+@media only screen and (min-width:  960px) {
     .wrapper {
         width: 960px;
     }
