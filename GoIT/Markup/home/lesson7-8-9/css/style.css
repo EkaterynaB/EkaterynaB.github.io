@@ -322,9 +322,9 @@ aside:nth-child(3) .content {
 
 .news {
     background: #f9f9f9;
-    -webkit-box-shadow: inset 0px 20px 47px -32px rgba(227,227,227,1);
-    -moz-box-shadow: inset 0px 20px 47px -32px rgba(227,227,227,1);
-    box-shadow: inset 0px 20px 47px -32px rgba(227,227,227,1);
+    -webkit-box-shadow: inset 0px 20px 31px -17px rgb(228, 228, 228);
+    -moz-box-shadow: inset 0px 20px 31px -17px rgb(228, 228, 228);
+    box-shadow: inset 0px 20px 31px -17px rgb(228, 228, 228);
 }
 .news .wrapper {
     padding: 102px 0 66px;
