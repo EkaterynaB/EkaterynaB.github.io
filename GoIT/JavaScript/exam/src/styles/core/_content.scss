@@ -20,7 +20,7 @@ p {
     background-size: cover;
 }
 .wrapper {
-    min-width: 320px;
+    width: 320px;
     margin: 0 auto;
     padding:  0 10px;
     box-sizing: border-box;
@@ -36,9 +36,12 @@ header {
 .header__actions {
     margin: 0 auto;
     display: inline-block;
+    a {
+        line-height: 36px;
+    }
 }
 .button {
-    padding: 8px 16px;
+    padding: 0 16px;
     border: 2px solid transparent;
     float: left;
     &:hover {
@@ -176,6 +179,7 @@ header {
     margin: 9px auto 0;
     position: relative;
     border-radius: 5px;
+    overflow: hidden;
 }
 .jcarousel {
     position: relative;
@@ -213,6 +217,7 @@ header {
 //PARTNERS
 
 .partners {
+    text-align: center;
     &__item {
         width: 220px;
         margin: 0 auto 27px;
@@ -323,7 +328,8 @@ header {
 .search {
     text-align: center;
     &__title {
-        margin-bottom: 8px;
+        margin-bottom: 10px;
+        margin-top: 27px;
     }
     &__subtitle {
         margin-bottom: 16px;
@@ -333,6 +339,7 @@ header {
         & input {
             width: 263px;
             height: 35px;
+            font: $fontText;
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;

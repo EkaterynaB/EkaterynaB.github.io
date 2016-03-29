@@ -62,11 +62,9 @@
     .jcarousel-wrapper {
         width: 237px;
         height: 400px;
-        overflow: hidden;
         position: relative;
         float: left;
         margin-left: 18px;
-        border-radius: 5px;
     }
     .jcarousel-wrapper:first-of-type {
         margin-left: 0;
@@ -126,7 +124,7 @@
     }
 
     // ACTIVITY
-
+    
     .activity__title {
         margin-bottom: 34px;
     }
@@ -166,7 +164,7 @@
     }
     .footer {
         &__wrapper {
-            padding: 34px 0 0 34px;
+            padding: 34px 0 109px 34px;
         }
         &__logo {
             float: left;
@@ -204,9 +202,6 @@
 @media only screen and (min-width:  960px) {
     .wrapper {
         width: 960px;
-    }
-    .button {
-        padding: 8px 16px;
     }
     header {
         padding-bottom: 140px
@@ -254,11 +249,9 @@
     .jcarousel-wrapper {
         width: 300px;
         height: 400px;
-        overflow: hidden;
         position: relative;
         float: left;
         margin-left: 19px;
-        border-radius: 5px;
     }
     .jcarousel-wrapper:first-of-type {
         margin-left: 1px;
@@ -273,6 +266,12 @@
         }
         &__title {
             top: 265px;
+        }
+        &__link-two {
+            top: 258px;
+        }
+        &__title-two {
+            top: 295px;
         }
     }
 
@@ -343,7 +342,7 @@
     }
     .footer {
         &__wrapper {
-            padding: 33px 0 31px 11px;
+            padding: 33px 0 109px 11px;
             overflow: hidden;
         }
         &__logo {
