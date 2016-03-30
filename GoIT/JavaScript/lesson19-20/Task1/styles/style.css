@@ -261,7 +261,8 @@ header {
   position: relative;
   cursor: pointer;
   color: #2a2b2e;
-  font: 13px/15px Ubuntu, Helvetica, Arial, sans-serif; }
+  font: 13px/15px Ubuntu, Helvetica, Arial, sans-serif;
+  font-weight: 500; }
   .advantages__read__more:hover {
     color: #248cec; }
   .advantages__read__more:hover:after {
