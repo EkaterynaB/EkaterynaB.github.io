@@ -509,7 +509,7 @@ footer {
     max-width: none; }
 
   .footer__wrapper {
-    padding: 34px 0 109px 34px; }
+    padding: 34px 0 33px 34px; }
   .footer__logo {
     float: left;
     margin-right: 85px;
@@ -523,11 +523,11 @@ footer {
     margin-top: 9px;
     margin-left: 0; }
   .footer__submenu {
-    margin-top: 3px;
-    position: absolute; }
+    margin-top: 3px; }
   .footer__item {
     padding-right: 100px;
-    display: inline-block; }
+    display: inline-block;
+    vertical-align: top; }
 
   .form {
     margin-bottom: 90px; }
@@ -647,7 +647,7 @@ footer {
     margin-bottom: 34px; }
 
   .footer__wrapper {
-    padding: 33px 0 109px 11px;
+    padding-left: 11px;
     overflow: hidden; }
   .footer__logo {
     float: left;

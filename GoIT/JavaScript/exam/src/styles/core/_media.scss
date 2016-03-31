@@ -124,7 +124,7 @@
     }
 
     // ACTIVITY
-    
+
     .activity__title {
         margin-bottom: 34px;
     }
@@ -164,7 +164,7 @@
     }
     .footer {
         &__wrapper {
-            padding: 34px 0 109px 34px;
+            padding: 34px 0 33px 34px;
         }
         &__logo {
             float: left;
@@ -183,11 +183,11 @@
         }
         &__submenu {
             margin-top: 3px;
-            position: absolute;
         }
         &__item {
             padding-right: 100px;
             display: inline-block;
+            vertical-align: top;
         }
     }
     .form {
@@ -342,7 +342,7 @@
     }
     .footer {
         &__wrapper {
-            padding: 33px 0 109px 11px;
+            padding-left: 11px;
             overflow: hidden;
         }
         &__logo {
