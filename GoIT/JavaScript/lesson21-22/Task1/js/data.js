@@ -1,8 +1,6 @@
 'use strict';
 (function() {
 
-document.addEventListener('DOMContentLoaded');
-
 let questions = [
     {
       title: "What is HTML?",
@@ -27,7 +25,5 @@ let questions = [
       }
     }
   ];
-
-let test = localStorage.setItem("test", JSON.stringify(questions));
-
+  
 })();

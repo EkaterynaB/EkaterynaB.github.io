@@ -88,3 +88,9 @@ p[class^=message] {
   background: rgba(29, 17, 78, 0.8);
   color: white;
 }
+.right {
+  color: green;
+}
+.wrong {
+  color: red;
+}

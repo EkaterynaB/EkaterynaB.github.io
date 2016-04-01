@@ -1,6 +1,6 @@
 define(
   'controller',
-  
+
   ['model', 'view', 'jquery'],
 
   function(model, view, $) {
@@ -21,8 +21,8 @@ define(
 
       view.elements.correctBtn.on('click', correctItem);
       view.elements.correctBtn.on('click', function() {
-        $(this).css('display', 'none');
-        view.elements.addBtn.css('display', 'inline-block');
+        $(this).removeClass('edition');
+        view.elements.addBtn.removeClass('edition');
       });
 
       var link = view.elements.listContainer;
@@ -32,7 +32,6 @@ define(
 
       function addItem() {
         var newItem = view.elements.input.val();
-        view.elements.addBtn.css('display', 'inline-block');
         model.addItem(newItem);
         view.renderList(model.data);
         view.elements.input.val('');
@@ -41,20 +40,13 @@ define(
       function removeItem() {
         $(this).parent().addClass('todo__item-close');
         view.elements.input.val('');
-        view.elements.addBtn.css('display', 'inline-block');
-        view.elements.correctBtn.css('display', 'none');
+        view.elements.addBtn.removeClass('edition');
+        view.elements.correctBtn.removeClass('edition');
         var item = $(this).attr('data-value');
         setTimeout(function() {
           model.removeItem(item);
           view.renderList(model.data);
         }, 400);
-      }
-
-      function denayRemove() {
-        console.log(this);
-        var item = $(this).attr('data-value');
-        model.removeItem(item);
-        view.renderList(model.data);
       }
 
       function correctedItem() {
@@ -63,8 +55,8 @@ define(
         view.elements.input.attr('data-value', correctElem);
         view.elements.input.focus();
         model.index2 = model.data.indexOf(correctElem);
-        view.elements.addBtn.css('display', 'none');
-        view.elements.correctBtn.css('display', 'inline-block');
+        view.elements.addBtn.addClass('edition');
+        view.elements.correctBtn.addClass('edition');
       }
 
       function correctItem() {
@@ -74,13 +66,6 @@ define(
         view.elements.input.val('');
       }
 
-      function faultClick() {
-        var newElem = view.elements.input.val();
-        view.renderList(model.data);
-        view.elements.input.val('');
-        view.elements.addBtn.css('display', 'inline-block');
-        view.elements.correctBtn.css('display', 'none');
-      }
     }
     return Controller;
   }
