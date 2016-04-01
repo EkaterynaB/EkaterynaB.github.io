@@ -21,8 +21,7 @@ define(
 
       view.elements.correctBtn.on('click', correctItem);
       view.elements.correctBtn.on('click', function() {
-        $(this).removeClass('edition');
-        view.elements.addBtn.removeClass('edition');
+        view.elements.inputBlock.removeClass('edition');
       });
 
       var link = view.elements.listContainer;
@@ -40,8 +39,7 @@ define(
       function removeItem() {
         $(this).parent().addClass('todo__item-close');
         view.elements.input.val('');
-        view.elements.addBtn.removeClass('edition');
-        view.elements.correctBtn.removeClass('edition');
+        view.elements.inputBlock.removeClass('edition');
         var item = $(this).attr('data-value');
         setTimeout(function() {
           model.removeItem(item);
@@ -55,8 +53,7 @@ define(
         view.elements.input.attr('data-value', correctElem);
         view.elements.input.focus();
         model.index2 = model.data.indexOf(correctElem);
-        view.elements.addBtn.addClass('edition');
-        view.elements.correctBtn.addClass('edition');
+        view.elements.inputBlock.addClass('edition');
       }
 
       function correctItem() {

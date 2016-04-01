@@ -16,6 +16,7 @@ define (
           content: $('.todo'),
           input: $('.todo__value'),
           addBtn: $('.todo__add'),
+          inputBlock: $('.todo__input'),
           correctBtn: $('.todo__change'),
           listContainer: $('.todo__list')
         };

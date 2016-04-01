@@ -79,11 +79,12 @@ li {
   line-height: 20px;
   margin-top: 5px;
 }
-.todo__add,
-.todo__change.edition {
+.todo__input .todo__add,
+.todo__input.edition .todo__change {
    display: inline-block;
 }
-.todo__change,
-.todo__add.edition {
+
+.todo__input .todo__change,
+.todo__input.edition .todo__add {
    display: none;
 }
