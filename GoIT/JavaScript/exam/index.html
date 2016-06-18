@@ -9,9 +9,8 @@
   <link href="dist/css/ie8.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="dist/js/ie/html5shiv.min.js"></script>
   <script src="dist/js/ie/respond.min.js"></script>
-  <![endif]-->
+  <![endif]-->  
   <script src="dist/js/js.min.js"></script>
-
 </head>
 <body>
     <section class="intro">
@@ -171,7 +170,9 @@
     <section class="activity">
         <div class="wrapper">
             <h3 class="activity__title title">Discover holiday activity ideas</h3>
-            <div class="grid"></div>
+            <div class="grid">
+
+            </div>
         </div>
     </section>
     <section class="search">
@@ -205,15 +206,16 @@
         </div>
     </footer>
     <script type="text/template" id="activity__template">
+
         <div class="grid">
-            <% for (var i = 0; i < data.images.length; i++) { %>
+            <% for (var i = 0; i < data.length; i++) { %>
                 <% if (i === 4 || i === 5) {  %>
                  <div class="grid-item grid-item--width2">
                 <% } else { %>
                      <div class="grid-item">
                 <% } %>
-                     <img src="<%= data.images[i].imageurl %>">
-                     <span><%= data.images[i].word %></span>
+                     <img src="<%= data[i].imageurl %>">
+                     <span><%= data[i].word %></span>
                  </div>
             <% } %>
         </div>
