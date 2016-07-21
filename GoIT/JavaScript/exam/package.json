@@ -12,7 +12,8 @@
     "grunt-contrib-imagemin": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0"
+    "grunt-contrib-watch": "^1.0.0",
+    "gulp-ruby-sass": "^2.0.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
